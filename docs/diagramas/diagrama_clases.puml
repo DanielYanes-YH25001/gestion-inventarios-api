@@ -1,0 +1,142 @@
+@startuml Diagrama de Clases UML para API
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam nodesep 70
+skinparam ranksep 70
+skinparam packageStyle rectangle
+
+skinparam arrowColor red
+skinparam packageBorderColor green
+skinparam packageBackgroundColor #babcf5
+skinparam packageFontColor darkblue
+
+' Creación de Enums
+package "Tipos de Datos" {
+    enum TipoMovimiento {
+      ENTRADA
+      SALIDA
+    }
+
+    enum EstadoTransferencia {
+      PENDIENTE
+      EN_TRANSITO
+      COMPLETADA
+      CANCELADA
+    }
+}
+
+' Creación de módulos
+package "Módulo de Seguridad" {
+    class Rol {
+      - id: Long
+      - nombre: String
+      - descripcion: String
+      + asignarPrivilegios()
+    }
+
+    class Usuario {
+      - id: Long
+      - nombre: String
+      - email: String
+      - password: String
+      - activo: Boolean
+      + autenticar()
+    }
+
+    Usuario "0..*" -up-> "1" Rol : tiene >
+}
+
+package "Módulo de Catálogo" {
+    class Categoria {
+      - id: Long
+      - nombre: String
+      - descripcion: String
+      + listarProductos()
+    }
+
+    class Proveedor {
+      - id: Long
+      - nombre: String
+      - contacto: String
+      - telefono: String
+      - direccion: String
+      + obtenerHistorialCompras()
+    }
+
+    class Producto {
+      - id: Long
+      - codigoBarras: String
+      - nombre: String
+      - descripcion: String
+      - precioUnitario: Double
+      - estado: Boolean
+      + actualizarPrecio()
+    }
+
+    Producto "0..*" -up-> "1" Categoria : clasifica >
+    Producto "0..*" -up-> "1" Proveedor : provee >
+}
+
+package "Módulo de Inventario y Sucursales" {
+    class Sucursal {
+      - id: Long
+      - nombre: String
+      - direccion: String
+      - telefono: String
+      - activa: Boolean
+      + obtenerStockTotal()
+    }
+
+    class StockSucursal {
+      - id: Long
+      - cantidadFisica: Integer
+      + aumentarStock(cantidad: Integer)
+      + disminuirStock(cantidad: Integer)
+    }
+
+    StockSucursal "0..*" -left-* "1" Sucursal : < almacena
+}
+
+package "Módulo de Transacciones" {
+    class Movimiento {
+      - id: Long
+      - tipo: TipoMovimiento
+      - cantidad: Integer
+      - fechaRegistro: LocalDateTime
+      - motivo: String
+      + registrar()
+    }
+
+    class Transferencia {
+      - id: Long
+      - cantidad: Integer
+      - fechaSolicitud: LocalDateTime
+      - fechaCompletada: LocalDateTime
+      - estado: EstadoTransferencia
+      + aprobarTransferencia()
+      + cancelarTransferencia()
+    }
+}
+
+' Relaciones entre módulos
+' Seguridad e Inventario
+Usuario "0..*" -right-> "1" Sucursal : pertenece a >
+
+' Catálogo e Inventario
+StockSucursal "0..*" -up-* "1" Producto : < posee
+
+' Transacciones y Seguridad
+Movimiento "0..*" -up-> "1" Usuario : registrado por >
+Transferencia "0..*" -up-> "1" Usuario : solicita >
+
+' Transacciones y Catálogo
+Movimiento "0..*" -up-> "1" Producto : afecta a >
+Transferencia "0..*" -up-> "1" Producto : mueve >
+
+' Transacciones e Inventario
+Movimiento "0..*" -up-> "1" Sucursal : ocurre en >
+Transferencia "0..*" -up-> "1" Sucursal : origen >
+Transferencia "0..*" -up-> "1" Sucursal : destino >
+
+@enduml
