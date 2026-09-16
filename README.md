@@ -9,8 +9,6 @@ Esta **API RESTful** está diseñada para la **Gestión Integral de Inventarios*
 - **Módulo de Transacciones:** Registro inmutable de movimientos (entradas y salidas) y trazabilidad de transferencias entre sucursales.
 - **Módulo de Seguridad:** Autenticación de usuarios, gestión de roles y asignación de privilegios sobre el sistema.
 
---
-
 ## 👥 Integrantes del Equipo de Desarrollo
 
 | Nombre Completo                  | Carnet  |
@@ -19,8 +17,6 @@ Esta **API RESTful** está diseñada para la **Gestión Integral de Inventarios*
 | Jesús Francisco Recinos Pinzón   | RP09016 |
 | William Eduardo Torres Serrano   | TS25003 |
 | Emerson Daniel Sagastume Munguia | SM06032 |
-
---
 
 ## ⚙️ Tecnologías Utilizadas
 
