@@ -1,0 +1,45 @@
+@startuml diagrama_casos_uso
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Administrador de Inventario" as Admin
+actor "Usuario de Lectura" as Lector
+
+rectangle "API de Gestión de Inventarios" {
+    ' CRUD Producto
+    usecase "Crear Producto" as UC1
+    usecase "Consultar Producto" as UC2
+    usecase "Actualizar Producto" as UC3
+    usecase "Eliminar Producto" as UC4
+
+    ' CRUD Proveedor
+    usecase "Crear Proveedor" as UC5
+    usecase "Consultar Proveedor" as UC6
+    usecase "Actualizar Proveedor" as UC7
+    usecase "Eliminar Proveedor" as UC8
+
+    ' Transacciones
+    usecase "Registrar Movimiento (Entrada/Salida)" as UC9
+    usecase "Consultar Transacciones" as UC10
+    usecase "Gestionar Transferencias" as UC11
+}
+
+' Relaciones del Administrador (Lado izquierdo)
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+Admin --> UC9
+Admin --> UC10
+Admin --> UC11
+
+' Relaciones del Usuario de Lectura
+UC2 <-- Lector
+UC6 <-- Lector
+UC10 <-- Lector
+
+@enduml
