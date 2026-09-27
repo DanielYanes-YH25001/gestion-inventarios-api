@@ -1,0 +1,74 @@
+@startuml Diagrama de Casos de Uso
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Administrador de Inventario" as admin
+actor "Usuario de Lectura" as lector
+
+rectangle "API para la Gestión de Inventarios" {
+    package "Gestión de Productos" {
+        usecase "Crear Producto" as cp
+        usecase "Consultar Producto" as rp
+        usecase "Actualizar Producto" as up
+        usecase "Eliminar Producto" as dp
+    }
+
+    package "Gestión de Proveedores" {
+        usecase "Crear Proveedor" as cprov
+        usecase "Consultar Proveedor" as rprov
+        usecase "Actualizar Proveedor" as uprov
+        usecase "Eliminar Proveedor" as dprov
+    }
+
+    package "Gestión de Sucursales" {
+        usecase "Crear Sucursal" as cs
+        usecase "Consultar Sucursal" as rs
+        usecase "Actualizar Sucursal" as us
+        usecase "Eliminar Sucursal" as ds
+    }
+
+    package "Gestión de Categorías" {
+        usecase "Crear Categoría" as cc
+        usecase "Consultar Categoría" as rc
+        usecase "Actualizar Categoría" as uc
+        usecase "Eliminar Categoría" as dc
+    }
+
+    package "Control de Inventario" {
+        usecase "Registrar Movimiento (Entrada/Salida)" as rm
+        usecase "Consultar Movimientos" as rmov
+    }
+}
+
+' Relaciones del usuario administrador
+admin --> cp
+admin --> rp
+admin --> up
+admin --> dp
+
+admin --> cprov
+admin --> rprov
+admin --> uprov
+admin --> dprov
+
+admin --> cs
+admin --> rs
+admin --> us
+admin --> ds
+
+admin --> cc
+admin --> rc
+admin --> uc
+admin --> dc
+
+admin --> rm
+admin --> rmov
+
+' Relaciones del usuario de lectura
+rp <-- lector
+rprov <-- lector
+rs <-- lector
+rc <-- lector
+rmov <-- lector
+
+@enduml
