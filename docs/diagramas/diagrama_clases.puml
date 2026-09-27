@@ -1,0 +1,87 @@
+@startuml Diagrama de Clases
+!theme plain
+skinparam classAttributeIconSize 0
+hide empty members
+
+' Enums
+enum RolUsuario {
+  ADMIN
+  LECTURA
+}
+
+enum TipoMovimiento {
+  ENTRADA
+  SALIDA
+}
+
+' Entidades de Catálogo Y Usuario
+class Usuario {
+  - id: Long
+  - nombre: String
+  - rol: RolUsuario
+}
+
+class Categoria {
+  - id: Long
+  - nombre: String
+  - descripcion: String
+}
+
+class Proveedor {
+  - id: Long
+  - nombre: String
+  - contacto: String
+  - telefono: String
+  - direccion: String
+}
+
+class Sucursal {
+  - id: Long
+  - nombre: String
+  - direccion: String
+  - activa: Boolean
+}
+
+' Entidad Principal
+class Producto {
+  - id: Long
+  - nombre: String
+  - descripcion: String
+  - precioBase: BigDecimal
+  - precioVenta: BigDecimal
+  - proveedor: Proveedor
+  - categoria: Categoria
+}
+
+' Entidades Transaccionales e Intermedias
+class StockSucursal {
+  - id: Long
+  - producto: Producto
+  - sucursal: Sucursal
+  - cantidadDisponible: Integer
+  + aumentarStock(cantidad: Integer): void
+  + disminuirStock(cantidad: Integer): void
+}
+
+class MovimientoInventario {
+  - id: Long
+  - tipoMovimiento: TipoMovimiento
+  - cantidad: Integer
+  - fechaRegistro: LocalDateTime
+  - producto: Producto
+  - sucursal: Sucursal
+  - usuario: Usuario
+}
+
+' Relaciones
+Categoria "1" o-- "0..*" Producto : clasifica >
+Proveedor "1" o-- "0..*" Producto : provee >
+
+Producto "1" *-- "0..*" StockSucursal : tiene <
+Sucursal "1" *-- "0..*" StockSucursal : almacena >
+
+Producto "1" <-- "0..*" MovimientoInventario : registra <
+Sucursal "1" <-- "0..*" MovimientoInventario : ocurre en <
+Usuario "1" <-- "0..*" MovimientoInventario : realizado por <
+
+@enduml
