@@ -3,3 +3,6 @@
 
 # Ejecutable de Gradle para Windows
 /gradlew.bat text eol=crlf
+
+# Artefactos JAR
+*.jar binary
