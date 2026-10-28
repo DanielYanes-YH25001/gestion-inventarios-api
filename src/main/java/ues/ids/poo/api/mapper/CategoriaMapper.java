@@ -17,7 +17,7 @@ public class CategoriaMapper {
 
     public CategoriaResponseDTO toResponseDTO(Categoria categoria) {
         return new CategoriaResponseDTO(
-            categoria.getIdCategoria(),
+            categoria.getIdCategoria().intValue(),
             categoria.getNombre(),
             categoria.getDescripcion()
         );

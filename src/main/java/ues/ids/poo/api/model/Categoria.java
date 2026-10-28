@@ -15,11 +15,11 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Integer idCategoria;
+    private Long idCategoria;
 
     @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(length = 255)
+    @Column
     private String descripcion;
 }
