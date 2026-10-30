@@ -16,19 +16,19 @@ enum TipoMovimiento {
 
 ' Entidades de Catálogo Y Usuario
 class Usuario {
-    - id: Long
+    - idUsuario: Integer
     - nombre: String
     - rol: RolUsuario
 }
 
 class Categoria {
-    - id: Long
+    - idCategoria: Integer
     - nombre: String
     - descripcion: String
 }
 
 class Proveedor {
-    - id: Long
+    - idProveedor: Integer
     - nombre: String
     - contacto: String
     - telefono: String
@@ -36,7 +36,7 @@ class Proveedor {
 }
 
 class Sucursal {
-    - id: Long
+    - idSucursal: Integer
     - nombre: String
     - direccion: String
     - activa: Boolean
@@ -44,7 +44,7 @@ class Sucursal {
 
 ' Entidad Principal
 class Producto {
-    - id: Long
+    - idProducto: Integer
     - nombre: String
     - descripcion: String
     - precioBase: BigDecimal
@@ -55,7 +55,7 @@ class Producto {
 
 ' Entidades Transaccionales e Intermedias
 class StockSucursal {
-    - id: Long
+    - idStockSucursal: Integer
     - producto: Producto
     - sucursal: Sucursal
     - cantidadDisponible: Integer
@@ -64,7 +64,7 @@ class StockSucursal {
 }
 
 class MovimientoInventario {
-    - id: Long
+    - idMovimientoInventario: Long
     - tipoMovimiento: TipoMovimiento
     - cantidad: Integer
     - fechaRegistro: LocalDateTime
