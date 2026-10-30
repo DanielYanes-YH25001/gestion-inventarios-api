@@ -316,7 +316,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HXYzpY6ZmIcDCRD2S0On-97" parent="HXYzpY6ZmIcDCRD2S0On-95" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="id_stock" vertex="1">
+        <mxCell id="HXYzpY6ZmIcDCRD2S0On-97" parent="HXYzpY6ZmIcDCRD2S0On-95" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="id_stock_sucursal" vertex="1">
           <mxGeometry height="30" width="280" x="30" as="geometry">
             <mxRectangle height="30" width="280" as="alternateBounds" />
           </mxGeometry>
@@ -371,7 +371,7 @@
             <mxRectangle height="30" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HXYzpY6ZmIcDCRD2S0On-119" parent="HXYzpY6ZmIcDCRD2S0On-117" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="id_movimiento" vertex="1">
+        <mxCell id="HXYzpY6ZmIcDCRD2S0On-119" parent="HXYzpY6ZmIcDCRD2S0On-117" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="id_movimiento_inventario" vertex="1">
           <mxGeometry height="30" width="530" x="30" as="geometry">
             <mxRectangle height="30" width="530" as="alternateBounds" />
           </mxGeometry>
