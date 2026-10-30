@@ -29,6 +29,11 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaService.obtenerTodas());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<CategoriaResponseDTO> obtenerPorId(@PathVariable Integer id) {
+        return ResponseEntity.ok(categoriaService.obtenerPorId(id));
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<CategoriaResponseDTO> actualizar(
         @PathVariable Integer id,

@@ -29,7 +29,14 @@ public class CategoriaService {
     public List<CategoriaResponseDTO> obtenerTodas() {
         return categoriaRepository.findAll().stream()
                 .map(categoriaMapper::toResponseDTO)
-                .collect(Collectors.toList());
+                .toList();
+    }
+
+    public CategoriaResponseDTO obtenerPorId(Integer id) {
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Categoría no encontrada"));
+
+        return categoriaMapper.toResponseDTO(categoria);
     }
 
     public CategoriaResponseDTO actualizarCategoria(Integer id, CategoriaRequestDTO request) {
