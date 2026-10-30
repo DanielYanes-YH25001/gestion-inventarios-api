@@ -29,7 +29,7 @@ public class CategoriaService {
     public List<CategoriaResponseDTO> obtenerTodas() {
         return categoriaRepository.findAll().stream()
                 .map(categoriaMapper::toResponseDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public CategoriaResponseDTO obtenerPorId(Integer id) {

@@ -21,7 +21,7 @@ public class ProveedorService {
     public List<ProveedorResponseDTO> obtenerTodos() {
         return proveedorRepository.findAll().stream()
                 .map(proveedorMapper::toResponseDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public ProveedorResponseDTO obtenerPorId(Integer id) {
