@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class ProveedorResponseDTO {
+
     private Integer id;
     private String nombre;
     private String contacto;

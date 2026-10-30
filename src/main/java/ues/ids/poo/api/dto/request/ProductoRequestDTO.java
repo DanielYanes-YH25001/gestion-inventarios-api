@@ -32,6 +32,4 @@ public class ProductoRequestDTO {
 
     @NotNull(message = "El ID de la categoría es obligatorio")
     private Integer idCategoria;
-
-
 }
