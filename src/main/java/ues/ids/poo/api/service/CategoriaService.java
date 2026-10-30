@@ -32,6 +32,13 @@ public class CategoriaService {
                 .collect(Collectors.toList());
     }
 
+    public CategoriaResponseDTO obtenerPorId(Integer id) {
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Categoría no encontrada"));
+
+        return categoriaMapper.toResponseDTO(categoria);
+    }
+
     public CategoriaResponseDTO actualizarCategoria(Integer id, CategoriaRequestDTO request) {
         Categoria categoria = categoriaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Categoría no encontrada"));
