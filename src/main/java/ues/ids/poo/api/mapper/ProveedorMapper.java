@@ -19,7 +19,7 @@ public class ProveedorMapper {
 
     public ProveedorResponseDTO toResponseDTO(Proveedor entity) {
         ProveedorResponseDTO dto = new ProveedorResponseDTO();
-        dto.setId(entity.getId());
+        dto.setId(entity.getIdProveedor());
         dto.setNombre(entity.getNombre());
         dto.setContacto(entity.getContacto());
         dto.setTelefono(entity.getTelefono());

@@ -134,7 +134,7 @@ public class ProductoService {
 
         // De los objetos completos, extraemos solo el ID para mandarlo en el JSON
         dto.setIdCategoria(producto.getCategoria().getIdCategoria());
-        dto.setIdProveedor(producto.getProveedor().getId());
+        dto.setIdProveedor(producto.getProveedor().getIdProveedor());
         return dto;
     }
 }

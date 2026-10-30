@@ -1,7 +1,9 @@
 package ues.ids.poo.api.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
@@ -11,23 +13,25 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name = "producto")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto")
+    @Column
     private Integer idProducto;
 
-    @Column(name = "nombre", nullable = false, length = 100)
+    @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(name = "descripcion", length = 255)
+    @Column
     private String descripcion;
 
-    @Column(name = "precio_base", nullable = false)
+    @Column(nullable = false)
     private BigDecimal precioBase;
 
-    @Column(name = "precio_venta", nullable = false)
+    @Column(nullable = false)
     private BigDecimal precioVenta;
 
     // --- RELACIONES FORÁNEAS DE LA TAREA 1 ---
