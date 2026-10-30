@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS sucursal (
 );
 
 CREATE TABLE IF NOT EXISTS stock_sucursal (
-    id_stock SERIAL PRIMARY KEY,
+    id_stock_sucursal SERIAL PRIMARY KEY,
     id_producto INT NOT NULL,
     id_sucursal INT NOT NULL,
     cantidad_disponible INT DEFAULT 0 NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS stock_sucursal (
 );
 
 CREATE TABLE IF NOT EXISTS movimiento_inventario (
-    id_movimiento BIGSERIAL PRIMARY KEY,
+    id_movimiento_inventario BIGSERIAL PRIMARY KEY,
     tipo_movimiento VARCHAR(20) NOT NULL CHECK (tipo_movimiento IN ('ENTRADA', 'SALIDA')),
     cantidad INT NOT NULL CHECK (cantidad > 0),
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
