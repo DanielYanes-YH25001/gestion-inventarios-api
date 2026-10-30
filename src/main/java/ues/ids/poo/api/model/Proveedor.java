@@ -10,18 +10,18 @@ public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_proveedor")
-    private Integer id;
+    @Column
+    private Integer idProveedor;
 
-    @Column(name = "nombre", nullable = false, length = 100)
+    @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(name = "contacto", length = 100)
+    @Column(length = 100)
     private String contacto;
 
-    @Column(name = "telefono", length = 20)
+    @Column(length = 20)
     private String telefono;
 
-    @Column(name = "direccion", length = 255)
+    @Column
     private String direccion;
 }

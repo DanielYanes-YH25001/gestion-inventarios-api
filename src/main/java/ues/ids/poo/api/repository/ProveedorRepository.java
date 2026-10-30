@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository;
 import ues.ids.poo.api.model.Proveedor;
 
 @Repository
-public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
-}
+public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {}
