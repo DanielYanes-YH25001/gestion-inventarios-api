@@ -32,7 +32,7 @@ public class ProductoService {
     private final ProveedorRepository proveedorRepository;
 
     /**
-     * CREAR (POST): Recibe un DTO, valida que las llaves foráneas existan,
+     * CREAR (POST): Recibe un DTO, válida que las llaves foráneas existan,
      * lo convierte a Entidad y lo guarda en la BD.
      */
     public ProductoResponseDTO crearProducto(ProductoRequestDTO dto) {
@@ -43,7 +43,7 @@ public class ProductoService {
         Proveedor proveedor = proveedorRepository.findById(dto.getIdProveedor())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El proveedor no existe"));
 
-        // 2. Instanciar una nueva Entidad (el molde de la tabla BD) y llenarla con los datos del DTO
+        // 2. Instance una nueva Entidad (el molde de la tabla BD) y llenarla con los datos del DTO
         Producto producto = new Producto();
         producto.setNombre(dto.getNombre());
         producto.setDescripcion(dto.getDescripcion());
@@ -60,7 +60,7 @@ public class ProductoService {
     }
 
     /**
-     * LEER TODOS (GET): Obtiene todos los registros de la tabla y los transforma a DTOs.
+     * LEER TODOS (GET): Obtiene todos los registros de la tabla y los transforma a DTO.
      */
     public List<ProductoResponseDTO> obtenerTodos() {
         // findAll() trae la lista de Entidades. Usamos stream() y map() para
