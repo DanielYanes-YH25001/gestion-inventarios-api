@@ -22,7 +22,7 @@ public class StockSucursal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_stock_sucursal")
+    @Column
     private Integer idStockSucursal;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -33,6 +33,6 @@ public class StockSucursal {
     @JoinColumn(name = "id_sucursal", nullable = false)
     private Sucursal sucursal;
 
-    @Column(name = "cantidad_disponible", nullable = false)
+    @Column(nullable = false)
     private Integer cantidadDisponible;
 }

@@ -1,7 +1,9 @@
 package ues.ids.poo.api.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import ues.ids.poo.api.dto.request.ProveedorRequestDTO;
 import ues.ids.poo.api.dto.response.ProveedorResponseDTO;
 import ues.ids.poo.api.mapper.ProveedorMapper;
@@ -9,7 +11,6 @@ import ues.ids.poo.api.model.Proveedor;
 import ues.ids.poo.api.repository.ProveedorRepository;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,7 +27,7 @@ public class ProveedorService {
 
     public ProveedorResponseDTO obtenerPorId(Integer id) {
         Proveedor proveedor = proveedorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Proveedor no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Proveedor no encontrado con ID: " + id));
         return proveedorMapper.toResponseDTO(proveedor);
     }
 
@@ -38,7 +39,7 @@ public class ProveedorService {
 
     public ProveedorResponseDTO actualizar(Integer id, ProveedorRequestDTO request) {
         Proveedor proveedor = proveedorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Proveedor no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Proveedor no encontrado con ID: " + id));
 
         proveedor.setNombre(request.getNombre());
         proveedor.setContacto(request.getContacto());
@@ -51,7 +52,7 @@ public class ProveedorService {
 
     public void eliminar(Integer id) {
         if (!proveedorRepository.existsById(id)) {
-            throw new RuntimeException("Proveedor no encontrado con ID: " + id);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Proveedor no encontrado con ID: " + id);
         }
         proveedorRepository.deleteById(id);
     }

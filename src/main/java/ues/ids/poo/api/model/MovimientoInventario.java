@@ -15,28 +15,28 @@ public class MovimientoInventario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_movimiento")
-    private Long idMovimiento;
+    @Column
+    private Long idMovimientoInventario;
 
-    @Column(name = "tipo_movimiento", nullable = false, length = 20)
+    @Column(nullable = false, length = 20)
     private String tipoMovimiento; // 'ENTRADA' o 'SALIDA'
 
-    @Column(name = "cantidad", nullable = false)
+    @Column(nullable = false)
     private Integer cantidad;
 
-    @Column(name = "fecha_registro", nullable = false)
+    @Column(nullable = false)
     private LocalDateTime fechaRegistro;
 
     // Relación con Producto
-    @Column(name = "id_producto", nullable = false)
+    @Column(nullable = false)
     private Integer idProducto;
 
     // Relación con Sucursal
-    @Column(name = "id_sucursal", nullable = false)
+    @Column(nullable = false)
     private Integer idSucursal;
 
     // Relación con Usuario
-    @Column(name = "id_usuario", nullable = false)
+    @Column(nullable = false)
     private Integer idUsuario;
 
 }

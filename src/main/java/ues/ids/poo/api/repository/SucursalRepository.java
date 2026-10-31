@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository;
 import ues.ids.poo.api.model.Sucursal;
 
 @Repository
-public interface SucursalRepository extends JpaRepository<Sucursal, Integer> {
-}
+public interface SucursalRepository extends JpaRepository<Sucursal, Integer> {}

@@ -19,7 +19,7 @@ public class Sucursal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_sucursal")
+    @Column
     private Integer idSucursal;
 
     @Column(nullable = false, length = 100)

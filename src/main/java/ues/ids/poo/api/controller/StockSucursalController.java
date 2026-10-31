@@ -12,7 +12,7 @@ import ues.ids.poo.api.service.StockSucursalService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/Stocksucursales")
+@RequestMapping("/api/stocksucursales")
 @RequiredArgsConstructor
 public class StockSucursalController {
 
