@@ -12,4 +12,6 @@ public interface StockSucursalRepository extends JpaRepository<StockSucursal, Lo
     List<StockSucursal> findBySucursal_IdSucursal(Integer idSucursal);
 
     boolean existsBySucursal_IdSucursal(Integer idSucursal);
+
+    boolean existsByProducto_IdProducto(Integer idProducto);
 }

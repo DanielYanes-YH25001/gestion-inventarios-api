@@ -36,7 +36,7 @@ public class SucursalService {
 
     public SucursalResponseDTO obtenerPorId(Integer id) {
         Sucursal sucursal = sucursalRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Sucursal no encontrada con el ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sucursal no encontrada con el ID: " + id));
 
         return sucursalMapper.toResponseDTO(sucursal);
     }

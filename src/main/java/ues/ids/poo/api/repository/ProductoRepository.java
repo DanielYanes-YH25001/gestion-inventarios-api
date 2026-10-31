@@ -8,4 +8,9 @@ import ues.ids.poo.api.model.Producto;
  * @author Fran Recinos
  */
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto, Integer> {}
+public interface ProductoRepository extends JpaRepository<Producto, Integer> {
+
+    boolean existsByCategoria_IdCategoria(Integer idCategoria);
+
+    boolean existsByProveedor_IdProveedor(Integer idProveedor);
+}

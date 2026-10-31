@@ -1,8 +1,10 @@
 package ues.ids.poo.api.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 import ues.ids.poo.api.dto.request.ProductoRequestDTO;
 import ues.ids.poo.api.dto.response.ProductoResponseDTO;
@@ -12,6 +14,7 @@ import ues.ids.poo.api.model.Proveedor;
 import ues.ids.poo.api.repository.CategoriaRepository;
 import ues.ids.poo.api.repository.ProductoRepository;
 import ues.ids.poo.api.repository.ProveedorRepository;
+import ues.ids.poo.api.repository.StockSucursalRepository;
 
 import java.util.List;
 
@@ -30,6 +33,7 @@ public class ProductoService {
     private final ProductoRepository productoRepository;
     private final CategoriaRepository categoriaRepository;
     private final ProveedorRepository proveedorRepository;
+    private final StockSucursalRepository stockSucursalRepository;
 
     /**
      * CREAR (POST): Recibe un DTO, valida que las llaves foráneas existan,
@@ -111,12 +115,28 @@ public class ProductoService {
     /**
      * ELIMINAR (DELETE): Borra el registro de la BD.
      */
+    @Transactional
     public void eliminarProducto(Integer id) {
-        // Validamos primero; si intentamos borrar algo que no existe, la BD daría error.
-        if (!productoRepository.existsById(id)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto no encontrado");
+        Producto producto = productoRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto no encontrado"));
+
+        if (stockSucursalRepository.existsByProducto_IdProducto(id)) {
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "No se puede eliminar el producto porque tiene stock asociado en una sucursal"
+            );
         }
-        productoRepository.deleteById(id);
+
+        try {
+            productoRepository.delete(producto);
+            productoRepository.flush();
+        } catch (DataIntegrityViolationException exception) {
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "No se puede eliminar el producto porque tiene registros asociados",
+                    exception
+            );
+        }
     }
 
     /**
