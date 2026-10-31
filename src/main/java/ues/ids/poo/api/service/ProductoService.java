@@ -60,7 +60,7 @@ public class ProductoService {
     }
 
     /**
-     * LEER TODOS (GET): Obtiene todos los registros de la tabla y los transforma a DTOs.
+     * LEER TODOS (GET): Obtiene todos los registros de la tabla y los transforma a DTO.
      */
     public List<ProductoResponseDTO> obtenerTodos() {
         // findAll() trae la lista de Entidades. Usamos stream() y map() para

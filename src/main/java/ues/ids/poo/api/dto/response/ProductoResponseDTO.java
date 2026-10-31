@@ -9,7 +9,6 @@ import java.math.BigDecimal;
  */
 @Data
 public class ProductoResponseDTO {
-
     private Integer idProducto;
     private String nombre;
     private String descripcion;
