@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ues.ids.poo.api.enums.TipoMovimiento;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,8 +20,9 @@ public class MovimientoInventario {
     @Column
     private Long idMovimientoInventario;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private String tipoMovimiento; // 'ENTRADA' o 'SALIDA'
+    private TipoMovimiento tipoMovimiento;
 
     @Column(nullable = false)
     private Integer cantidad;
@@ -27,16 +30,27 @@ public class MovimientoInventario {
     @Column(nullable = false)
     private LocalDateTime fechaRegistro;
 
-    // Relación con Producto
-    @Column(nullable = false)
-    private Integer idProducto;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(
+        name = "id_producto",
+        nullable = false,
+        foreignKey = @ForeignKey(name = "fk_movimiento_producto")
+    )
+    private Producto producto;
 
-    // Relación con Sucursal
-    @Column(nullable = false)
-    private Integer idSucursal;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(
+        name = "id_sucursal",
+        nullable = false,
+        foreignKey = @ForeignKey(name = "fk_movimiento_sucursal")
+    )
+    private Sucursal sucursal;
 
-    // Relación con Usuario
-    @Column(nullable = false)
-    private Integer idUsuario;
-
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(
+        name = "id_usuario",
+        nullable = false,
+        foreignKey = @ForeignKey(name = "fk_movimiento_usuario")
+    )
+    private Usuario usuario;
 }

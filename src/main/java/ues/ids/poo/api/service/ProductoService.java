@@ -145,16 +145,14 @@ public class ProductoService {
      * Centralizamos esto aquí para no escribir las mismas 8 líneas en los métodos de crear, leer y actualizar.
      */
     private ProductoResponseDTO mapearADTO(Producto producto) {
-        ProductoResponseDTO dto = new ProductoResponseDTO();
-        dto.setIdProducto(producto.getIdProducto());
-        dto.setNombre(producto.getNombre());
-        dto.setDescripcion(producto.getDescripcion());
-        dto.setPrecioBase(producto.getPrecioBase());
-        dto.setPrecioVenta(producto.getPrecioVenta());
-
-        // De los objetos completos, extraemos solo el ID para mandarlo en el JSON
-        dto.setIdCategoria(producto.getCategoria().getIdCategoria());
-        dto.setIdProveedor(producto.getProveedor().getIdProveedor());
-        return dto;
+        return new ProductoResponseDTO(
+            producto.getIdProducto(),
+            producto.getNombre(),
+            producto.getDescripcion(),
+            producto.getPrecioBase(),
+            producto.getPrecioVenta(),
+            producto.getProveedor().getIdProveedor(),
+            producto.getCategoria().getIdCategoria()
+        );
     }
 }

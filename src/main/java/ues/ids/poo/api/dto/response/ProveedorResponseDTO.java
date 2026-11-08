@@ -1,12 +1,9 @@
 package ues.ids.poo.api.dto.response;
 
-import lombok.Data;
-
-@Data
-public class ProveedorResponseDTO {
-    private Integer idProveedor;
-    private String nombre;
-    private String contacto;
-    private String telefono;
-    private String direccion;
-}
+public record ProveedorResponseDTO(
+    Integer idProveedor,
+    String nombre,
+    String contacto,
+    String telefono,
+    String direccion
+) {}
