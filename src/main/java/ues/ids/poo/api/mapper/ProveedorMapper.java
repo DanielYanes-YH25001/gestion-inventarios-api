@@ -18,12 +18,12 @@ public class ProveedorMapper {
     }
 
     public ProveedorResponseDTO toResponseDTO(Proveedor entity) {
-        ProveedorResponseDTO dto = new ProveedorResponseDTO();
-        dto.setIdProveedor(entity.getIdProveedor());
-        dto.setNombre(entity.getNombre());
-        dto.setContacto(entity.getContacto());
-        dto.setTelefono(entity.getTelefono());
-        dto.setDireccion(entity.getDireccion());
-        return dto;
+        return new ProveedorResponseDTO(
+            entity.getIdProveedor(),
+            entity.getNombre(),
+            entity.getContacto(),
+            entity.getTelefono(),
+            entity.getDireccion()
+        );
     }
 }

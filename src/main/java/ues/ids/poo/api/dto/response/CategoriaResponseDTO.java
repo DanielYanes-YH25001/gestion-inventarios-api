@@ -1,12 +1,9 @@
 package ues.ids.poo.api.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+// import lombok.AllArgsConstructor;
 
-@Data
-@AllArgsConstructor
-public class CategoriaResponseDTO {
-    private Integer idCategoria;
-    private String nombre;
-    private String descripcion;
-}
+public record CategoriaResponseDTO(
+    Integer idCategoria,
+    String nombre,
+    String descripcion
+) {}

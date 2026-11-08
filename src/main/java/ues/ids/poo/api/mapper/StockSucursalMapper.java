@@ -12,15 +12,10 @@ public class StockSucursalMapper {
             return null;
         }
 
-        StockSucursalResponseDTO dto = new StockSucursalResponseDTO();
-
-        if (stock.getProducto() != null) {
-            dto.setIdProducto(stock.getProducto().getIdProducto());
-            dto.setNombreProducto(stock.getProducto().getNombre());
-        }
-
-        dto.setCantidadDisponible(stock.getCantidadDisponible());
-
-        return dto;
+        return new StockSucursalResponseDTO(
+            stock.getProducto() != null ? stock.getProducto().getIdProducto() : null,
+            stock.getProducto() != null ? stock.getProducto().getNombre() : null,
+            stock.getCantidadDisponible()
+        );
     }
 }
