@@ -31,12 +31,10 @@ class CategoriaControllerTest {
         Integer id = 1;
 
 
-        // Si tu record tiene otro orden, ajústalo aquí (ej. nombre primero).
         CategoriaResponseDTO catfalsa = new CategoriaResponseDTO(id, "Electrónica", "Productos electrónicos");
 
         when(categoriaService.obtenerPorId(id)).thenReturn(catfalsa);
 
-        // ⚠️ Cambia "/api/categorias" si tu controlador usa otra ruta
         mockMvc.perform(get("/api/categorias/{id}", id))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.nombre").value("Electrónica"));

@@ -33,7 +33,6 @@ class ProductoControllerTest {
     void testGetProducto_Exito() throws Exception {
         Integer id = 1;
 
-        // ✅ CORRECCIÓN: Instanciamos el record con sus 7 campos exactos
         ProductoResponseDTO productoFalso = new ProductoResponseDTO(
                 id,
                 "Laptop HP",
