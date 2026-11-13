@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gestion-inventarios-api
-          image: spring-boot-inventory-api:latest
+          image: gestion-inventarios-api:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
@@ -34,15 +34,3 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: DB_PASSWORD
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: gestion-inventarios-api-service
-spec:
-  selector:
-    app: gestion-inventarios-api
-  ports:
-    - port: 80
-      targetPort: 8080
-  type: NodePort
