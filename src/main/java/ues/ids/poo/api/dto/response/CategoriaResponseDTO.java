@@ -6,4 +6,7 @@ public record CategoriaResponseDTO(
     Integer idCategoria,
     String nombre,
     String descripcion
-) {}
+) {
+
+
+}
