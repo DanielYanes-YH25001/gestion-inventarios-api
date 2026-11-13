@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestion-inventarios-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gestion-inventarios-api
+  template:
+    metadata:
+      labels:
+        app: gestion-inventarios-api
+    spec:
+      containers:
+        - name: gestion-inventarios-api
+          image: gestion-inventarios-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: DB_URL
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: DB_USERNAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: DB_PASSWORD
