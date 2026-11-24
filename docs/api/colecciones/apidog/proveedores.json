@@ -1,0 +1,1569 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Gestión Inventarios API",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1406712",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "allowAutomationWriteAutomationCreatedSprintBranch": true,
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW",
+        "enableHierarchicalSlug": false
+      },
+      "folderShareExpandModeSettings": {
+        "expandId": [],
+        "mode": "AUTO"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server",
+        "moduleId": 1505613
+      },
+      {
+        "id": "1505614",
+        "name": "Default Server",
+        "moduleId": 1505614
+      },
+      {
+        "id": "1506674",
+        "name": "Default Server",
+        "moduleId": 1506674
+      },
+      {
+        "id": "1506744",
+        "name": "Default Server",
+        "moduleId": 1506744
+      },
+      {
+        "id": "1506757",
+        "name": "Default Server",
+        "moduleId": 1506757
+      },
+      {
+        "id": "1515158",
+        "name": "Default Server",
+        "moduleId": 1515158
+      }
+    ],
+    "cloudMock": {
+      "enable": false,
+      "security": "free",
+      "tokenKey": "apidogToken",
+      "isCreatedAutomaticallyByDefaultConfigFromAdmin": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 11308137,
+      "auth": {
+        "type": "noauth"
+      },
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1505614,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Consulta Proveedores",
+          "api": {
+            "id": "46271019",
+            "method": "get",
+            "path": "",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {
+              "type": "noauth",
+              "noauth": {}
+            },
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "184795823",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/18577108"
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {}
+              },
+              "required": false,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "## Descripción\n\nOperación **GET** para listar todos los Proveedores registrados.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 18,
+            "cases": [
+              {
+                "id": 62436150,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "184795823",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "type": "none"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505614,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Consulta Proveedor",
+          "api": {
+            "id": "46317424",
+            "method": "get",
+            "path": "/{id}",
+            "parameters": {
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "integer",
+                  "enable": true,
+                  "schema": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "example": "1"
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "164389454",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MDEVMX0ZC80K803RTTBDJ"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MDEVMX0ZC80K803RTTBDJ": {
+                      "$ref": "#/definitions/18577108"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "134861402",
+                "code": "404",
+                "name": "Proveedor no encontrado",
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MFA6K3YRRMX76JQF10DHA"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MFA6K3YRRMX76JQF10DHA": {
+                      "$ref": "#/definitions/18575703"
+                    }
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "OK",
+                "data": "{\"contacto\":\"Miguel Ángel Guardado\",\"direccion\":\"San Miguel, San Miguel\",\"idProveedor\":6,\"nombre\":\"Calzado Oriente\",\"telefono\":\"+50374302203\"}",
+                "responseId": "164389454"
+              }
+            ],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 64,
+            "cases": [
+              {
+                "id": 62510444,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "164389454",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "6",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.c823113a-7d06-4af1-8330-baf8d95f7f9d\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"c823113a-7d06-4af1-8330-baf8d95f7f9d\",\"requestIndex\":0,\"httpRequestId\":\"03d59923-44bb-4527-9945-4426a3bb884c\"},\"type\":\"http\",\"response\":{\"id\":\"878b6856-572f-4d96-8c89-c6a252e2e43e\",\"status\":\"OK\",\"code\":200,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:39:38 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,99,111,110,116,97,99,116,111,34,58,34,77,105,103,117,101,108,32,195,129,110,103,101,108,32,71,117,97,114,100,97,100,111,34,44,34,100,105,114,101,99,99,105,111,110,34,58,34,83,97,110,32,77,105,103,117,101,108,44,32,83,97,110,32,77,105,103,117,101,108,34,44,34,105,100,80,114,111,118,101,101,100,111,114,34,58,54,44,34,110,111,109,98,114,101,34,58,34,67,97,108,122,97,100,111,32,79,114,105,101,110,116,101,34,44,34,116,101,108,101,102,111,110,111,34,58,34,43,53,48,51,55,52,51,48,50,50,48,51,34,125]},\"cookie\":[],\"responseTime\":45,\"responseSize\":143,\"downloadedBytes\":143,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":1.9871000000275671,\"wait\":3.6498999999603257,\"dns\":0.7371000000275671,\"tcp\":1.8027000000001863,\"firstByte\":36.37589999998454,\"download\":1.628000000026077,\"process\":0.48149999999441206,\"total\":46.662200000020675}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\",\"6\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"GET\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"9341cbda-0373-43f1-ab77-d75949664ba0\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":49910},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"GET\",\"href\":\"http://localhost:8080/api/proveedores/6\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":200,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:39:38 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":143},\"timings\":{\"start\":1793471977986,\"requestStart\":1793471977988,\"offset\":{\"request\":1.9871000000275671,\"socket\":5.636999999987893,\"lookup\":6.37410000001546,\"connect\":8.176800000015646,\"response\":44.552700000000186,\"end\":46.18070000002626,\"done\":46.662200000020675}},\"session\":{\"id\":\"9341cbda-0373-43f1-ab77-d75949664ba0\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1793471977930,\"preProcessorsStarted\":1793471977937,\"preProcessorsCompleted\":1793471977937,\"postProcessorsStarted\":1793471978035,\"postProcessorsCompleted\":1793471978035,\"completed\":1793471978038},\"metaInfo\":{\"httpApiId\":46317424,\"httpApiCaseId\":62510444,\"httpApiName\":\"Consulta Proveedor\",\"httpApiPath\":\"/6\",\"httpApiMethod\":\"get\",\"httpApiCaseName\":\"Success\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 62532787,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "134861402",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.0405ddca-fa9c-4730-80a1-695b46ca9ef8\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"0405ddca-fa9c-4730-80a1-695b46ca9ef8\",\"requestIndex\":0,\"httpRequestId\":\"ffc7aa26-4f73-4685-8411-2b8174cc82f6\"},\"type\":\"http\",\"response\":{\"id\":\"c7a46249-e1a5-4d71-ac71-253909802024\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:45:31 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,116,105,109,101,115,116,97,109,112,34,58,34,50,48,50,54,45,49,48,45,51,49,84,49,56,58,52,53,58,51,49,46,53,55,50,50,55,57,51,48,48,90,34,44,34,115,116,97,116,117,115,34,58,52,48,52,44,34,101,114,114,111,114,34,58,34,78,111,116,32,70,111,117,110,100,34,44,34,109,101,115,115,97,103,101,34,58,34,80,114,111,118,101,101,100,111,114,32,110,111,32,101,110,99,111,110,116,114,97,100,111,32,99,111,110,32,73,68,58,32,49,48,48,34,44,34,112,97,116,104,34,58,34,47,97,112,105,47,112,114,111,118,101,101,100,111,114,101,115,47,49,48,48,34,125]},\"cookie\":[],\"responseTime\":18,\"responseSize\":157,\"downloadedBytes\":157,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":1.5921000000089407,\"wait\":3.2195999999530613,\"dns\":0.7006000000983477,\"tcp\":2.3059999998658895,\"firstByte\":10.01410000002943,\"download\":1.6274999999441206,\"process\":0.3283999999985099,\"total\":19.7882999998983}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\",\"100\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"GET\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"85921e78-9bfb-43cb-8504-902a84bc7ee5\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":53966},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"GET\",\"href\":\"http://localhost:8080/api/proveedores/100\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:45:31 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":157},\"timings\":{\"start\":1793472331557,\"requestStart\":1793472331558,\"offset\":{\"request\":1.5921000000089407,\"socket\":4.811699999962002,\"lookup\":5.51230000006035,\"connect\":7.818299999926239,\"response\":17.83239999995567,\"end\":19.45989999989979,\"done\":19.7882999998983}},\"session\":{\"id\":\"85921e78-9bfb-43cb-8504-902a84bc7ee5\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1793472331495,\"preProcessorsStarted\":1793472331507,\"preProcessorsCompleted\":1793472331507,\"postProcessorsStarted\":1793472331588,\"postProcessorsCompleted\":1793472331588,\"completed\":1793472331593},\"metaInfo\":{\"httpApiId\":46317424,\"httpApiCaseId\":62532787,\"httpApiName\":\"Consulta Proveedor\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"get\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505614,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Registrar Proveedor",
+          "api": {
+            "id": "46271020",
+            "method": "post",
+            "path": "",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "125254254",
+                "code": "201",
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MGR02RRV64JQ2RN7XM5SQ"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MGR02RRV64JQ2RN7XM5SQ": {
+                      "$ref": "#/definitions/18577108"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "177983297",
+                "code": "400",
+                "name": "Body incorrecto",
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MJMEAYGCNEWKVJ1W4AY4V"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MJMEAYGCNEWKVJ1W4AY4V": {
+                      "$ref": "#/definitions/18575703"
+                    }
+                  }
+                },
+                "contentType": "json"
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "contacto": {
+                    "type": "string"
+                  },
+                  "telefono": {
+                    "type": "string"
+                  },
+                  "direccion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nombre",
+                  "contacto",
+                  "telefono",
+                  "direccion"
+                ],
+                "x-apidog-orders": [
+                  "nombre",
+                  "contacto",
+                  "telefono",
+                  "direccion"
+                ]
+              },
+              "required": false,
+              "mediaType": "",
+              "examples": [
+                {
+                  "value": "{\n    \"nombre\": \"Confecciones del Pacífico S.A. de C.V.\",\n    \"contacto\": \"José Martínez\",\n    \"telefono\": \"+50375556789\",\n    \"direccion\": \"Boulevard Los Próceres 25, La Libertad\"\n}",
+                  "mediaType": "application/json",
+                  "description": ""
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "Operación **POST** para registrar un nuevo Proveedor.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 30,
+            "cases": [
+              {
+                "id": 62436151,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "125254254",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n    \"nombre\": \"Confecciones del Pacífico S.A. de C.V.\",\r\n    \"contacto\": \"José Martínez\",\r\n    \"telefono\": \"+50375556789\",\r\n    \"direccion\": \"Boulevard Los Próceres 25, La Libertad\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": "{\"id\":\"temp.e7270e6c-fda2-4a48-838e-d2c7a8b5e58f\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"e7270e6c-fda2-4a48-838e-d2c7a8b5e58f\",\"requestIndex\":0,\"httpRequestId\":\"188c88c9-0d33-4eae-a9a2-c46a2b84c69e\"},\"type\":\"http\",\"response\":{\"id\":\"d82f8344-486d-4f13-a0b7-0a5fbb413967\",\"status\":\"Created\",\"code\":201,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 03:52:44 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,99,111,110,116,97,99,116,111,34,58,34,74,111,115,195,169,32,77,97,114,116,195,173,110,101,122,34,44,34,100,105,114,101,99,99,105,111,110,34,58,34,66,111,117,108,101,118,97,114,100,32,76,111,115,32,80,114,195,179,99,101,114,101,115,32,50,53,44,32,76,97,32,76,105,98,101,114,116,97,100,34,44,34,105,100,80,114,111,118,101,101,100,111,114,34,58,56,44,34,110,111,109,98,114,101,34,58,34,67,111,110,102,101,99,99,105,111,110,101,115,32,100,101,108,32,80,97,99,195,173,102,105,99,111,32,83,46,65,46,32,100,101,32,67,46,86,46,34,44,34,116,101,108,101,102,111,110,111,34,58,34,43,53,48,51,55,53,53,53,54,55,56,57,34,125]},\"cookie\":[],\"responseTime\":28,\"responseSize\":177,\"downloadedBytes\":177,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.9929050002247095,\"wait\":1.3472239999100566,\"dns\":0.5386649998836219,\"tcp\":0.5242500002495944,\"firstByte\":23.59049699967727,\"download\":1.183623000048101,\"process\":0.130131000187248,\"total\":28.307295000180602}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":191,\"system\":true}],\"method\":\"POST\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\r\\n    \\\"nombre\\\": \\\"Confecciones del Pacífico S.A. de C.V.\\\",\\r\\n    \\\"contacto\\\": \\\"José Martínez\\\",\\r\\n    \\\"telefono\\\": \\\"+50375556789\\\",\\r\\n    \\\"direccion\\\": \\\"Boulevard Los Próceres 25, La Libertad\\\"\\r\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"e32c41f9-3c21-44d4-b439-d81126ae9086\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":49006},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"POST\",\"href\":\"http://localhost:8080/api/proveedores\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"191\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":201,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 03:52:44 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":177},\"timings\":{\"start\":1793418764694,\"requestStart\":1793418764695,\"offset\":{\"request\":0.9929050002247095,\"socket\":2.340129000134766,\"lookup\":2.878794000018388,\"connect\":3.4030440002679825,\"response\":26.993540999945253,\"end\":28.177163999993354,\"done\":28.307295000180602}},\"session\":{\"id\":\"e32c41f9-3c21-44d4-b439-d81126ae9086\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":false,\"result\":{\"actual\":201,\"expect\":200},\"message\":\"Se obtuvo 201 cuando se esperaba 200.\"}},\"passed\":false,\"timings\":{\"started\":1793418764685,\"preProcessorsStarted\":1793418764686,\"preProcessorsCompleted\":1793418764686,\"postProcessorsStarted\":1793418764724,\"postProcessorsCompleted\":1793418764724,\"completed\":1793418764725},\"metaInfo\":{\"httpApiId\":46271020,\"httpApiCaseId\":62436151,\"httpApiName\":\"Registrar Proveedor\",\"httpApiPath\":\"\",\"httpApiMethod\":\"post\",\"httpApiCaseName\":\"Success\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62510406,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": " Wrong Params",
+                "responseId": "177983297",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\n  \"$$$$\": \"$$$$\",\n  \"@@@@\": \"@@@@\"\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.571684c6-9101-4cd2-a653-cf3a163996cb\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"571684c6-9101-4cd2-a653-cf3a163996cb\",\"requestIndex\":0,\"httpRequestId\":\"4fc2ab01-699d-4160-a515-3840ee767549\"},\"type\":\"http\",\"response\":{\"id\":\"3fbca966-16c2-46e2-8afe-96bc92871de9\",\"status\":\"Bad Request\",\"code\":400,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 14:05:08 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,116,105,109,101,115,116,97,109,112,34,58,34,50,48,50,54,45,49,49,45,48,56,84,49,52,58,48,53,58,48,56,46,53,56,52,52,55,55,51,48,48,90,34,44,34,115,116,97,116,117,115,34,58,52,48,48,44,34,101,114,114,111,114,34,58,34,66,97,100,32,82,101,113,117,101,115,116,34,44,34,109,101,115,115,97,103,101,34,58,34,69,108,32,99,111,110,116,97,99,116,111,32,100,101,108,32,112,114,111,118,101,101,100,111,114,32,101,115,32,111,98,108,105,103,97,116,111,114,105,111,34,44,34,112,97,116,104,34,58,34,47,97,112,105,47,112,114,111,118,101,101,100,111,114,101,115,34,125]},\"cookie\":[],\"responseTime\":56,\"responseSize\":160,\"downloadedBytes\":160,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.62589999998454,\"wait\":0.3326999999990221,\"dns\":0,\"tcp\":0,\"firstByte\":54.430099999997765,\"download\":0.6786000000138301,\"process\":0.05059999998775311,\"total\":56.11789999998291}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":38,\"system\":true}],\"method\":\"POST\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n  \\\"$$$$\\\": \\\"$$$$\\\",\\n  \\\"@@@@\\\": \\\"@@@@\\\"\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"0ff2737d-0153-4585-bdae-c9c44078c780\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":55302},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"POST\",\"href\":\"http://localhost:8080/api/proveedores\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"38\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":400,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 14:05:08 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":160},\"timings\":{\"start\":1794146708532,\"requestStart\":1794146708533,\"offset\":{\"request\":0.62589999998454,\"socket\":0.9585999999835622,\"response\":55.38869999998133,\"end\":56.06729999999516,\"lookup\":0.9585999999835622,\"connect\":0.9585999999835622,\"done\":56.11789999998291}},\"session\":{\"id\":\"0ff2737d-0153-4585-bdae-c9c44078c780\",\"reused\":true}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1794146708493,\"preProcessorsStarted\":1794146708494,\"preProcessorsCompleted\":1794146708494,\"postProcessorsStarted\":1794146708589,\"postProcessorsCompleted\":1794146708589,\"completed\":1794146708591},\"metaInfo\":{\"httpApiId\":46271020,\"httpApiCaseId\":62510406,\"httpApiName\":\"Registrar Proveedor\",\"httpApiPath\":\"\",\"httpApiMethod\":\"post\",\"httpApiCaseName\":\" Wrong Params\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505614,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Actualizar Proveedor",
+          "api": {
+            "id": "46271021",
+            "method": "put",
+            "path": "/{id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "integer",
+                  "enable": true,
+                  "schema": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "example": "1"
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "142152427",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MKCRSN3HBNTGBV846M6FC"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MKCRSN3HBNTGBV846M6FC": {
+                      "$ref": "#/definitions/18577108"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "130368518",
+                "code": "404",
+                "name": "Proveedor no encontrado",
+                "headers": [],
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MM8324X3VGM9R9K95BSZF"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MM8324X3VGM9R9K95BSZF": {
+                      "$ref": "#/definitions/18575703"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "127707380",
+                "code": "400",
+                "name": "Body incorrecto",
+                "headers": [],
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MMTQAJ4QA7634MZ8YAXAH"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MMTQAJ4QA7634MZ8YAXAH": {
+                      "$ref": "#/definitions/18575703"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "contacto": {
+                    "type": "string"
+                  },
+                  "telefono": {
+                    "type": "string"
+                  },
+                  "direccion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nombre",
+                  "contacto",
+                  "telefono",
+                  "direccion"
+                ],
+                "x-apidog-orders": [
+                  "nombre",
+                  "contacto",
+                  "telefono",
+                  "direccion"
+                ]
+              },
+              "required": false,
+              "mediaType": "",
+              "examples": [
+                {
+                  "value": "{\r\n\t\"nombre\": \"Moda Urbana S.A. de C.V.\",\r\n\t\"contacto\": \"Juan Fuentes\",\r\n\t\"telefono\": \"+50375559876\",\r\n\t\"direccion\": \"Calle Principal 45, Santa Ana\"\r\n}",
+                  "mediaType": "application/json",
+                  "description": ""
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "## Descripción\n\nOperación **PUT** para actualizar un registro completo de Proveedor utilizando su ID.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 42,
+            "cases": [
+              {
+                "id": 62436152,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "142152427",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "2",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n\t\"nombre\": \"Moda Urbana S.A. de C.V.\",\r\n\t\"contacto\": \"Juan Fuentes\",\r\n\t\"telefono\": \"+50375559876\",\r\n\t\"direccion\": \"Calle Principal 45, Santa Ana\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62510407,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "130368518",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n\t\"nombre\": \"Moda Urbana S.A. de C.V.\",\r\n\t\"contacto\": \"Juan Fuentes\",\r\n\t\"telefono\": \"+50375559876\",\r\n\t\"direccion\": \"Calle Principal 45, Santa Ana\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.aadfc88f-22a5-4625-8d1a-ca3de399a804\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"aadfc88f-22a5-4625-8d1a-ca3de399a804\",\"requestIndex\":0,\"httpRequestId\":\"11f422ac-d869-4e8a-8287-6434a1e52738\"},\"type\":\"http\",\"response\":{\"id\":\"1d4e078d-92a6-4a17-8a70-139ad0099320\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 03:54:44 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,101,114,114,111,114,34,58,34,80,114,111,118,101,101,100,111,114,32,110,111,32,101,110,99,111,110,116,114,97,100,111,32,99,111,110,32,73,68,58,32,57,57,34,125]},\"cookie\":[],\"responseTime\":14,\"responseSize\":46,\"downloadedBytes\":46,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\",\"99\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":151,\"system\":true}],\"method\":\"PUT\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\r\\n\\t\\\"nombre\\\": \\\"Moda Urbana S.A. de C.V.\\\",\\r\\n\\t\\\"contacto\\\": \\\"Juan Fuentes\\\",\\r\\n\\t\\\"telefono\\\": \\\"+50375559876\\\",\\r\\n\\t\\\"direccion\\\": \\\"Calle Principal 45, Santa Ana\\\"\\r\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"ecb02022-74dc-4db0-be1e-8c8f5cabf7a0\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":40540},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"PUT\",\"href\":\"http://localhost:8080/api/proveedores/99\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"151\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 03:54:44 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":46},\"timings\":{\"start\":1793418884774,\"requestStart\":1793418884775,\"offset\":{\"request\":0.6008160002529621,\"socket\":1.3797070002183318,\"lookup\":1.6327250003814697,\"connect\":1.9561809999868274,\"response\":13.471224000211805,\"end\":14.429995000362396,\"done\":14.556092000100762}},\"session\":{\"id\":\"ecb02022-74dc-4db0-be1e-8c8f5cabf7a0\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":false,\"message\":\"data should have required property timestamp<br/>data should have required property status<br/>data should have required property message<br/>data should have required property path\",\"errors\":[{\"keyword\":\"required\",\"dataPath\":\"\",\"schemaPath\":\"#/required\",\"params\":{\"missingProperty\":\"timestamp\"},\"message\":\"should have required property timestamp\"},{\"keyword\":\"required\",\"dataPath\":\"\",\"schemaPath\":\"#/required\",\"params\":{\"missingProperty\":\"status\"},\"message\":\"should have required property status\"},{\"keyword\":\"required\",\"dataPath\":\"\",\"schemaPath\":\"#/required\",\"params\":{\"missingProperty\":\"message\"},\"message\":\"should have required property message\"},{\"keyword\":\"required\",\"dataPath\":\"\",\"schemaPath\":\"#/required\",\"params\":{\"missingProperty\":\"path\"},\"message\":\"should have required property path\"}]},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1793418884766,\"preProcessorsStarted\":1793418884767,\"preProcessorsCompleted\":1793418884767,\"postProcessorsStarted\":1793418884791,\"postProcessorsCompleted\":1793418884791,\"completed\":1793418884792},\"metaInfo\":{\"httpApiId\":46271021,\"httpApiCaseId\":62510407,\"httpApiName\":\"Actualizar Proveedor\",\"httpApiPath\":\"/99\",\"httpApiMethod\":\"put\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 62510408,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": " Wrong Params",
+                "responseId": "127707380",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "1",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"$$$$\": \"$$$$\",\r\n  \"@@@@\": \"@@@@\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.8f38271f-e54b-47c2-973f-4e00e3573bd1\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"8f38271f-e54b-47c2-973f-4e00e3573bd1\",\"requestIndex\":0,\"httpRequestId\":\"1aa26a44-4e48-4388-be77-a20b875bb942\"},\"type\":\"http\",\"response\":{\"id\":\"2234964a-3bcf-410d-b630-96f07aae2cae\",\"status\":\"Bad Request\",\"code\":400,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:49:56 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,116,105,109,101,115,116,97,109,112,34,58,34,50,48,50,54,45,49,48,45,51,49,84,49,56,58,52,57,58,53,54,46,57,55,57,50,55,50,54,48,48,90,34,44,34,115,116,97,116,117,115,34,58,52,48,48,44,34,101,114,114,111,114,34,58,34,66,97,100,32,82,101,113,117,101,115,116,34,44,34,109,101,115,115,97,103,101,34,58,34,69,108,32,99,111,110,116,97,99,116,111,32,100,101,108,32,112,114,111,118,101,101,100,111,114,32,101,115,32,111,98,108,105,103,97,116,111,114,105,111,34,44,34,112,97,116,104,34,58,34,47,97,112,105,47,112,114,111,118,101,101,100,111,114,101,115,47,49,34,125]},\"cookie\":[],\"responseTime\":11,\"responseSize\":162,\"downloadedBytes\":162,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.7744999998249114,\"wait\":0.32600000011734664,\"dns\":0,\"tcp\":0,\"firstByte\":9.444200000027195,\"download\":1.109500000020489,\"process\":0.09159999992698431,\"total\":11.745799999916926}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\",\"1\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":41,\"system\":true}],\"method\":\"PUT\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\r\\n  \\\"$$$$\\\": \\\"$$$$\\\",\\r\\n  \\\"@@@@\\\": \\\"@@@@\\\"\\r\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"32bedf77-60d1-4c4a-b04f-12b7d741d694\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":52722},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"PUT\",\"href\":\"http://localhost:8080/api/proveedores/1\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"41\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":400,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:49:56 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":162},\"timings\":{\"start\":1793472596974,\"requestStart\":1793472596975,\"offset\":{\"request\":0.7744999998249114,\"socket\":1.100499999942258,\"response\":10.544699999969453,\"end\":11.654199999989942,\"lookup\":1.100499999942258,\"connect\":1.100499999942258,\"done\":11.745799999916926}},\"session\":{\"id\":\"32bedf77-60d1-4c4a-b04f-12b7d741d694\",\"reused\":true}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1793472596966,\"preProcessorsStarted\":1793472596967,\"preProcessorsCompleted\":1793472596967,\"postProcessorsStarted\":1793472596988,\"postProcessorsCompleted\":1793472596988,\"completed\":1793472596990},\"metaInfo\":{\"httpApiId\":46271021,\"httpApiCaseId\":62510408,\"httpApiName\":\"Actualizar Proveedor\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"put\",\"httpApiCaseName\":\" Wrong Params\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505614,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Remover Proveedor",
+          "api": {
+            "id": "46271022",
+            "method": "delete",
+            "path": "/{id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "integer",
+                  "enable": true,
+                  "schema": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "example": "1"
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "164898199",
+                "code": "204",
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "noContent",
+                "mediaType": ""
+              },
+              {
+                "id": "199193907",
+                "code": "404",
+                "name": "Proveedor no encontrado",
+                "headers": [],
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M69MTBH9QWYAK8MC6A0N5HM9"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M69MTBH9QWYAK8MC6A0N5HM9": {
+                      "$ref": "#/definitions/18575703"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": false,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "Operación **DELETE** para remover un Proveedor utilizando su ID.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 54,
+            "cases": [
+              {
+                "id": 62436153,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "164898199",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "6",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62510409,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "199193907",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.0d0a81a0-a3a9-4e6e-8564-3b9467c570f4\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"0d0a81a0-a3a9-4e6e-8564-3b9467c570f4\",\"requestIndex\":0,\"httpRequestId\":\"49915faa-8dd8-432a-9308-f402df54f3da\"},\"type\":\"http\",\"response\":{\"id\":\"8679c857-bb2f-4f8c-ad51-6f9fcd6e92da\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:51:33 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,116,105,109,101,115,116,97,109,112,34,58,34,50,48,50,54,45,49,48,45,51,49,84,49,56,58,53,49,58,51,51,46,54,53,57,48,51,51,54,48,48,90,34,44,34,115,116,97,116,117,115,34,58,52,48,52,44,34,101,114,114,111,114,34,58,34,78,111,116,32,70,111,117,110,100,34,44,34,109,101,115,115,97,103,101,34,58,34,80,114,111,118,101,101,100,111,114,32,110,111,32,101,110,99,111,110,116,114,97,100,111,32,99,111,110,32,73,68,58,32,49,48,48,34,44,34,112,97,116,104,34,58,34,47,97,112,105,47,112,114,111,118,101,101,100,111,114,101,115,47,49,48,48,34,125]},\"cookie\":[],\"responseTime\":19,\"responseSize\":157,\"downloadedBytes\":157,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.5230000000447035,\"wait\":0.9136000000871718,\"dns\":0.2146999998949468,\"tcp\":0.45879999990575016,\"firstByte\":16.146900000050664,\"download\":0.6618999999482185,\"process\":0.07280000019818544,\"total\":18.99170000012964}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"proveedores\",\"100\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"DELETE\",\"baseUrl\":\"http://localhost:8080/api/proveedores\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"326ce818-f9e2-4b08-9a5c-c789ba1b77e8\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":52862},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"DELETE\",\"href\":\"http://localhost:8080/api/proveedores/100\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sat, 31 Oct 2026 18:51:33 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":157},\"timings\":{\"start\":1793472693636,\"requestStart\":1793472693637,\"offset\":{\"request\":0.5230000000447035,\"socket\":1.4366000001318753,\"lookup\":1.651300000026822,\"connect\":2.1100999999325722,\"response\":18.256999999983236,\"end\":18.918899999931455,\"done\":18.99170000012964}},\"session\":{\"id\":\"326ce818-f9e2-4b08-9a5c-c789ba1b77e8\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1793472693603,\"preProcessorsStarted\":1793472693604,\"preProcessorsCompleted\":1793472693604,\"postProcessorsStarted\":1793472693668,\"postProcessorsCompleted\":1793472693668,\"completed\":1793472693669},\"metaInfo\":{\"httpApiId\":46271022,\"httpApiCaseId\":62510409,\"httpApiName\":\"Remover Proveedor\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"delete\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1505614,\"serverId\":\"1505614\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505614,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505614,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "mcpClientCollection": [],
+  "responseCollection": [],
+  "schemaCollection": [
+    {
+      "id": 3878842,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 1505614,
+      "items": [
+        {
+          "name": "Error de Respuesta",
+          "displayName": "",
+          "id": "#/definitions/18575703",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "timestamp": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "error": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ],
+              "x-apidog-orders": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1505614
+        },
+        {
+          "name": "Proveedor",
+          "displayName": "",
+          "id": "#/definitions/18577108",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "idProveedor": {
+                  "type": "integer"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "contacto": {
+                  "type": "string"
+                },
+                "telefono": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "idProveedor",
+                "nombre",
+                "contacto",
+                "telefono",
+                "direccion"
+              ],
+              "x-apidog-orders": [
+                "idProveedor",
+                "nombre",
+                "contacto",
+                "telefono",
+                "direccion"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1505614
+        }
+      ]
+    }
+  ],
+  "securitySchemeCollection": [],
+  "oasComponentCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.11163251"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [
+    {
+      "id": "1406697",
+      "variables": [
+        {
+          "name": "test",
+          "securityType": "default",
+          "value": "test",
+          "description": "",
+          "isBindInitial": true,
+          "initialValue": "test",
+          "isSync": true
+        }
+      ]
+    }
+  ],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 1971332,
+      "name": "Positive",
+      "description": "Valid inputs and correct expected results, representing typical usage."
+    },
+    {
+      "id": 1971333,
+      "name": "Negative",
+      "description": "Negative, invalid inputs such as missing fields, wrong types, unsupported methods, etc."
+    },
+    {
+      "id": 1971334,
+      "name": "Boundary",
+      "description": "Extreme or edge conditions, such as maximum string length, empty values, zero, null, etc."
+    },
+    {
+      "id": 1971335,
+      "name": "Security",
+      "description": "Test cases that may expose API security risks."
+    },
+    {
+      "id": 1971336,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 9738506,
+      "name": "Required Fields Only",
+      "description": "Send only the required fields with valid values, omitting all optional fields, to test minimal valid requests."
+    },
+    {
+      "id": 9738507,
+      "name": "Valid Semantic",
+      "description": "Use values that are syntactically correct and also make sense in the business logic or domain context."
+    },
+    {
+      "id": 9738508,
+      "name": "Enum Combination Coverage",
+      "description": "For all enum-type parameters, apply orthogonal design to systematically construct test case combinations of parameters and their enum values, dedicated to testing enum coverage."
+    },
+    {
+      "id": 9738509,
+      "name": "Other Positive Case",
+      "description": "Provide realistic and valid inputs that match the API specification, producing the correct and expected result."
+    },
+    {
+      "id": 9738510,
+      "name": "Missing Required Fields",
+      "description": "Omit one or more required fields in the request body or parameters."
+    },
+    {
+      "id": 9738511,
+      "name": "Invalid Values",
+      "description": "Provide values that are within the correct type and format, but logically invalid for the field."
+    },
+    {
+      "id": 9738512,
+      "name": "Type Errors",
+      "description": "Use values with incorrect data types, such as sending a string instead of an integer."
+    },
+    {
+      "id": 9738513,
+      "name": "Format Errors",
+      "description": "Provide values in an incorrect format, e.g., wrong date pattern, malformed email address."
+    },
+    {
+      "id": 9738514,
+      "name": "Semantic Errors",
+      "description": "Use syntactically correct and properly formatted values that are logically impossible or violate domain rules."
+    },
+    {
+      "id": 9738515,
+      "name": "Other Negative Case",
+      "description": "Provide invalid or unexpected inputs that should trigger error handling or rejection by the API."
+    },
+    {
+      "id": 9738516,
+      "name": "Null",
+      "description": "Must be the JSON literal `null` (not empty, not \"null\")."
+    },
+    {
+      "id": 9738517,
+      "name": "Zero",
+      "description": "Must be the numeric literal 0."
+    },
+    {
+      "id": 9738518,
+      "name": "Empty Values",
+      "description": "Must be \"\"."
+    },
+    {
+      "id": 9738519,
+      "name": "Max Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738520,
+      "name": "Min Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738521,
+      "name": "Overflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738522,
+      "name": "Underflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738523,
+      "name": "Overly Long Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738524,
+      "name": "Overly Short Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738525,
+      "name": "Broken Object Level Authorization",
+      "description": "Users access or manipulate data objects without proper authorization."
+    },
+    {
+      "id": 9738526,
+      "name": "Access Control",
+      "description": "Restricting resources and actions users can access based on roles, permissions, or attributes."
+    },
+    {
+      "id": 9738527,
+      "name": "Auth Failures",
+      "description": "Authentication is weak, misconfigured, or bypassed, allowing unauthorized access."
+    },
+    {
+      "id": 9738528,
+      "name": "SQL Injection",
+      "description": "Insert malicious SQL code into input fields to test for SQL injection vulnerabilities."
+    },
+    {
+      "id": 9738529,
+      "name": "XSS Injection",
+      "description": "Inject JavaScript or HTML tags to test for cross-site scripting vulnerabilities."
+    },
+    {
+      "id": 9738530,
+      "name": "Fuzzy Input",
+      "description": "Send large or randomly generated payloads to test input validation and stability."
+    },
+    {
+      "id": 9738531,
+      "name": "Command Injection",
+      "description": "Insert shell commands into inputs to test for command execution vulnerabilities."
+    },
+    {
+      "id": 9738532,
+      "name": "JSON Injection",
+      "description": "Insert malicious or unexpected JSON structures to test parsing and validation."
+    },
+    {
+      "id": 9738533,
+      "name": "NoSQL Injection",
+      "description": "Provide NoSQL-specific malicious queries or operators to test for injection vulnerabilities."
+    },
+    {
+      "id": 9738534,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1505614",
+      "name": "Proveedores",
+      "description": "CRUD operacional sobre los Proveedores. Incluyendo peticiones **GET**, **POST**, **PUT** y **DELETE**.",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}

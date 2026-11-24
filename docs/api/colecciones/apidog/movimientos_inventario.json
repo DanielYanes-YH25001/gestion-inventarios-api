@@ -1,0 +1,1058 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Gestión Inventarios API",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1406712",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "allowAutomationWriteAutomationCreatedSprintBranch": true,
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW",
+        "enableHierarchicalSlug": false
+      },
+      "folderShareExpandModeSettings": {
+        "expandId": [],
+        "mode": "AUTO"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server",
+        "moduleId": 1505613
+      },
+      {
+        "id": "1505614",
+        "name": "Default Server",
+        "moduleId": 1505614
+      },
+      {
+        "id": "1506674",
+        "name": "Default Server",
+        "moduleId": 1506674
+      },
+      {
+        "id": "1506744",
+        "name": "Default Server",
+        "moduleId": 1506744
+      },
+      {
+        "id": "1506757",
+        "name": "Default Server",
+        "moduleId": 1506757
+      },
+      {
+        "id": "1515158",
+        "name": "Default Server",
+        "moduleId": 1515158
+      }
+    ],
+    "cloudMock": {
+      "enable": false,
+      "security": "free",
+      "tokenKey": "apidogToken",
+      "isCreatedAutomaticallyByDefaultConfigFromAdmin": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 11419163,
+      "auth": {
+        "type": "noauth"
+      },
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1515158,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Consulta de Movimientos",
+          "api": {
+            "id": "46706140",
+            "method": "get",
+            "path": "",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "120919756",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/18716043"
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 180,
+            "cases": [
+              {
+                "id": 63207564,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "120919756",
+                "parameters": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "type": "none"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1515158,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1515158,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Consulta de Movimiento",
+          "api": {
+            "id": "46706199",
+            "method": "get",
+            "path": "/{id}",
+            "parameters": {
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "integer",
+                  "enable": true,
+                  "schema": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      1
+                    ]
+                  }
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "120919756",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "$ref": "#/definitions/18716043"
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "182132913",
+                "code": "404",
+                "name": "Movimiento no encontrado",
+                "headers": [],
+                "jsonSchema": {
+                  "$ref": "#/definitions/18716044"
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": true,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 186,
+            "cases": [
+              {
+                "id": 63207565,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "120919756",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "3",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1515158,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 63207568,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "182132913",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.b26bba10-cff3-496f-b00c-a9bfc6a630d6\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"b26bba10-cff3-496f-b00c-a9bfc6a630d6\",\"requestIndex\":0,\"httpRequestId\":\"c5b2c838-e248-476a-a8e1-aed1e62c8729\"},\"type\":\"http\",\"response\":{\"id\":\"43f232e8-4aad-4747-beb8-3a4f265b89ad\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 03:27:20 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,116,105,109,101,115,116,97,109,112,34,58,34,50,48,50,54,45,49,49,45,48,56,84,48,51,58,50,55,58,50,48,46,49,54,48,90,34,44,34,115,116,97,116,117,115,34,58,52,48,52,44,34,101,114,114,111,114,34,58,34,78,111,116,32,70,111,117,110,100,34,44,34,112,97,116,104,34,58,34,47,97,112,105,47,109,111,118,105,109,105,101,110,116,111,115,47,49,48,48,34,125]},\"cookie\":[],\"responseTime\":82,\"responseSize\":103,\"downloadedBytes\":103,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":1.1280999998562038,\"wait\":2.0354000004008412,\"dns\":0.3581999996677041,\"tcp\":0.7128000003285706,\"firstByte\":76.42179999966174,\"download\":1.7121000001206994,\"process\":0.4237999999895692,\"total\":82.79220000002533}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"movimientos\",\"100\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"GET\",\"baseUrl\":\"http://localhost:8080/api/movimientos\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"19a323e5-89f2-4296-bd65-1e1a3ef07d3b\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":52398},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"GET\",\"href\":\"http://localhost:8080/api/movimientos/100\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 03:27:20 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":103},\"timings\":{\"start\":1794108440101,\"requestStart\":1794108440102,\"offset\":{\"request\":1.1280999998562038,\"socket\":3.163500000257045,\"lookup\":3.521699999924749,\"connect\":4.23450000025332,\"response\":80.65629999991506,\"end\":82.36840000003576,\"done\":82.79220000002533}},\"session\":{\"id\":\"19a323e5-89f2-4296-bd65-1e1a3ef07d3b\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":false,\"message\":\"data should have required property message\",\"errors\":[{\"keyword\":\"required\",\"dataPath\":\"\",\"schemaPath\":\"#/definitions/18716044/required\",\"params\":{\"missingProperty\":\"message\"},\"message\":\"should have required property message\"}]},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1794108440081,\"preProcessorsStarted\":1794108440082,\"preProcessorsCompleted\":1794108440082,\"postProcessorsStarted\":1794108440185,\"postProcessorsCompleted\":1794108440185,\"completed\":1794108440191},\"metaInfo\":{\"httpApiId\":46706199,\"httpApiCaseId\":63207568,\"httpApiName\":\"Consulta de Movimiento\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"get\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1515158,\"serverId\":\"1515158\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1515158,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1515158,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Registrar Movimiento",
+          "api": {
+            "id": "46706225",
+            "method": "post",
+            "path": "",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "164878017",
+                "code": "201",
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M6WKB76QS6XXFEJX9ZRA8SB9"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M6WKB76QS6XXFEJX9ZRA8SB9": {
+                      "$ref": "#/definitions/18716043"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "145503268",
+                "code": "400",
+                "name": "Body incorrecto",
+                "headers": [],
+                "jsonSchema": {
+                  "$ref": "#/definitions/18716044"
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [
+              {
+                "name": "Example 1",
+                "data": "{\r\n    \"idMovimientoInventario\": 9,\r\n    \"idProducto\": 1,\r\n    \"idSucursal\": 1,\r\n    \"idUsuario\": 1,\r\n    \"tipoMovimiento\": \"ENTRADA\",\r\n    \"cantidad\": 20,\r\n    \"fechaRegistro\": \"2026-11-07T21:48:52.3078625\"\r\n}",
+                "responseId": "164878017"
+              }
+            ],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "idProducto": {
+                    "type": "integer",
+                    "examples": [
+                      1
+                    ],
+                    "minimum": 1
+                  },
+                  "idSucursal": {
+                    "type": "integer",
+                    "examples": [
+                      1
+                    ],
+                    "minimum": 1
+                  },
+                  "idUsuario": {
+                    "type": "integer",
+                    "examples": [
+                      1
+                    ],
+                    "minimum": 1
+                  },
+                  "tipoMovimiento": {
+                    "type": "string",
+                    "enum": [
+                      "ENTRADA",
+                      "SALIDA"
+                    ],
+                    "x-apidog-enum": [
+                      {
+                        "value": "ENTRADA",
+                        "name": "Entrada",
+                        "description": ""
+                      },
+                      {
+                        "value": "SALIDA",
+                        "name": "Salida",
+                        "description": ""
+                      }
+                    ]
+                  },
+                  "cantidad": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "fechaRegistro": {
+                    "type": "string"
+                  }
+                },
+                "x-apidog-refs": {},
+                "x-apidog-orders": [
+                  "idProducto",
+                  "idSucursal",
+                  "idUsuario",
+                  "tipoMovimiento",
+                  "cantidad",
+                  "fechaRegistro"
+                ],
+                "required": [
+                  "idProducto",
+                  "idSucursal",
+                  "idUsuario",
+                  "tipoMovimiento",
+                  "cantidad",
+                  "fechaRegistro"
+                ]
+              },
+              "required": true,
+              "mediaType": "",
+              "examples": [
+                {
+                  "name": "Example 1",
+                  "value": "{\r\n    \"idProducto\": 1,\r\n    \"idSucursal\": 1,\r\n    \"idUsuario\": 1,\r\n    \"tipoMovimiento\": \"ENTRADA\",\r\n    \"cantidad\": 20\r\n}",
+                  "mediaType": "application/json"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 196,
+            "cases": [
+              {
+                "id": 63207572,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "164878017",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n    \"idProducto\": 1,\r\n    \"idSucursal\": 1,\r\n    \"idUsuario\": 1,\r\n    \"tipoMovimiento\": \"ENTRADA\",\r\n    \"cantidad\": 20\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.bf38ab56-7345-4208-8c40-2a6998fbb242\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"bf38ab56-7345-4208-8c40-2a6998fbb242\",\"requestIndex\":0,\"httpRequestId\":\"f16814f4-2cfb-4156-9d3b-99bd02baa5fb\"},\"type\":\"http\",\"response\":{\"id\":\"215700c7-3f98-47ce-97f6-a197a4c095a9\",\"status\":\"Created\",\"code\":201,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 03:48:52 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,105,100,77,111,118,105,109,105,101,110,116,111,73,110,118,101,110,116,97,114,105,111,34,58,57,44,34,105,100,80,114,111,100,117,99,116,111,34,58,49,44,34,105,100,83,117,99,117,114,115,97,108,34,58,49,44,34,105,100,85,115,117,97,114,105,111,34,58,49,44,34,116,105,112,111,77,111,118,105,109,105,101,110,116,111,34,58,34,69,78,84,82,65,68,65,34,44,34,99,97,110,116,105,100,97,100,34,58,50,48,44,34,102,101,99,104,97,82,101,103,105,115,116,114,111,34,58,34,50,48,50,54,45,49,49,45,48,55,84,50,49,58,52,56,58,53,50,46,51,48,55,56,54,50,53,34,125]},\"cookie\":[],\"responseTime\":60,\"responseSize\":159,\"downloadedBytes\":159,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.6129000000655651,\"wait\":1.316999999806285,\"dns\":0.24470000015571713,\"tcp\":0.795200000051409,\"firstByte\":56.076399999670684,\"download\":1.1869000000879169,\"process\":0.30219999980181456,\"total\":60.53529999963939}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"movimientos\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":171,\"system\":true}],\"method\":\"POST\",\"baseUrl\":\"http://localhost:8080/api/movimientos\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\r\\n    \\\"tipoMovimiento\\\": \\\"ENTRADA\\\",\\r\\n    \\\"cantidad\\\": 20,\\r\\n    \\\"fechaRegistro\\\": \\\"2026-11-07 08:12:56.12\\\",\\r\\n    \\\"idProducto\\\": 1,\\r\\n    \\\"idSucursal\\\": 1,\\r\\n    \\\"idUsuario\\\": 1\\r\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"4976c9b7-ab2a-4f82-82be-89d92692ef80\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":54896},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"POST\",\"href\":\"http://localhost:8080/api/movimientos\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"171\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":201,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Sun, 08 Nov 2026 03:48:52 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":159},\"timings\":{\"start\":1794109732281,\"requestStart\":1794109732282,\"offset\":{\"request\":0.6129000000655651,\"socket\":1.92989999987185,\"lookup\":2.174600000027567,\"connect\":2.969800000078976,\"response\":59.04619999974966,\"end\":60.23309999983758,\"done\":60.53529999963939}},\"session\":{\"id\":\"4976c9b7-ab2a-4f82-82be-89d92692ef80\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1794109732273,\"preProcessorsStarted\":1794109732273,\"preProcessorsCompleted\":1794109732273,\"postProcessorsStarted\":1794109732343,\"postProcessorsCompleted\":1794109732343,\"completed\":1794109732348},\"metaInfo\":{\"httpApiId\":46706225,\"httpApiCaseId\":63207572,\"httpApiName\":\"Registrar Movimiento\",\"httpApiPath\":\"\",\"httpApiMethod\":\"post\",\"httpApiCaseName\":\"Success\",\"moduleId\":1515158,\"serverId\":\"1515158\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1515158,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 63207573,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": " Wrong Params",
+                "responseId": "145503268",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n    \"$$$$\": \"$$$$\",\r\n    \"@@@@\": \"@@@@\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1515158,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1515158,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "mcpClientCollection": [],
+  "responseCollection": [],
+  "schemaCollection": [
+    {
+      "id": 3901107,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 1515158,
+      "items": [
+        {
+          "name": "Movimiento Inventario",
+          "displayName": "",
+          "id": "#/definitions/18716043",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "idMovimientoInventario": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "examples": [
+                    1
+                  ]
+                },
+                "idProducto": {
+                  "type": "integer",
+                  "examples": [
+                    1
+                  ],
+                  "minimum": 1
+                },
+                "idSucursal": {
+                  "type": "integer",
+                  "examples": [
+                    1
+                  ],
+                  "minimum": 1
+                },
+                "idUsuario": {
+                  "type": "integer",
+                  "examples": [
+                    1
+                  ],
+                  "minimum": 1
+                },
+                "tipoMovimiento": {
+                  "type": "string",
+                  "enum": [
+                    "ENTRADA",
+                    "SALIDA"
+                  ],
+                  "x-apidog-enum": [
+                    {
+                      "value": "ENTRADA",
+                      "name": "Entrada",
+                      "description": ""
+                    },
+                    {
+                      "value": "SALIDA",
+                      "name": "Salida",
+                      "description": ""
+                    }
+                  ]
+                },
+                "cantidad": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "examples": [
+                    1
+                  ]
+                },
+                "fechaRegistro": {
+                  "type": "string"
+                }
+              },
+              "x-apidog-orders": [
+                "idMovimientoInventario",
+                "idProducto",
+                "idSucursal",
+                "idUsuario",
+                "tipoMovimiento",
+                "cantidad",
+                "fechaRegistro"
+              ],
+              "required": [
+                "idMovimientoInventario",
+                "idProducto",
+                "idSucursal",
+                "idUsuario",
+                "tipoMovimiento",
+                "cantidad",
+                "fechaRegistro"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1515158
+        },
+        {
+          "name": "Error de Respuesta",
+          "displayName": "",
+          "id": "#/definitions/18716044",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "timestamp": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "error": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ],
+              "x-apidog-orders": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1515158
+        }
+      ]
+    }
+  ],
+  "securitySchemeCollection": [],
+  "oasComponentCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.11163251"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [
+    {
+      "id": "1406697",
+      "variables": [
+        {
+          "name": "test",
+          "securityType": "default",
+          "value": "test",
+          "description": "",
+          "isBindInitial": true,
+          "initialValue": "test",
+          "isSync": true
+        }
+      ]
+    }
+  ],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 1971332,
+      "name": "Positive",
+      "description": "Valid inputs and correct expected results, representing typical usage."
+    },
+    {
+      "id": 1971333,
+      "name": "Negative",
+      "description": "Negative, invalid inputs such as missing fields, wrong types, unsupported methods, etc."
+    },
+    {
+      "id": 1971334,
+      "name": "Boundary",
+      "description": "Extreme or edge conditions, such as maximum string length, empty values, zero, null, etc."
+    },
+    {
+      "id": 1971335,
+      "name": "Security",
+      "description": "Test cases that may expose API security risks."
+    },
+    {
+      "id": 1971336,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 9738506,
+      "name": "Required Fields Only",
+      "description": "Send only the required fields with valid values, omitting all optional fields, to test minimal valid requests."
+    },
+    {
+      "id": 9738507,
+      "name": "Valid Semantic",
+      "description": "Use values that are syntactically correct and also make sense in the business logic or domain context."
+    },
+    {
+      "id": 9738508,
+      "name": "Enum Combination Coverage",
+      "description": "For all enum-type parameters, apply orthogonal design to systematically construct test case combinations of parameters and their enum values, dedicated to testing enum coverage."
+    },
+    {
+      "id": 9738509,
+      "name": "Other Positive Case",
+      "description": "Provide realistic and valid inputs that match the API specification, producing the correct and expected result."
+    },
+    {
+      "id": 9738510,
+      "name": "Missing Required Fields",
+      "description": "Omit one or more required fields in the request body or parameters."
+    },
+    {
+      "id": 9738511,
+      "name": "Invalid Values",
+      "description": "Provide values that are within the correct type and format, but logically invalid for the field."
+    },
+    {
+      "id": 9738512,
+      "name": "Type Errors",
+      "description": "Use values with incorrect data types, such as sending a string instead of an integer."
+    },
+    {
+      "id": 9738513,
+      "name": "Format Errors",
+      "description": "Provide values in an incorrect format, e.g., wrong date pattern, malformed email address."
+    },
+    {
+      "id": 9738514,
+      "name": "Semantic Errors",
+      "description": "Use syntactically correct and properly formatted values that are logically impossible or violate domain rules."
+    },
+    {
+      "id": 9738515,
+      "name": "Other Negative Case",
+      "description": "Provide invalid or unexpected inputs that should trigger error handling or rejection by the API."
+    },
+    {
+      "id": 9738516,
+      "name": "Null",
+      "description": "Must be the JSON literal `null` (not empty, not \"null\")."
+    },
+    {
+      "id": 9738517,
+      "name": "Zero",
+      "description": "Must be the numeric literal 0."
+    },
+    {
+      "id": 9738518,
+      "name": "Empty Values",
+      "description": "Must be \"\"."
+    },
+    {
+      "id": 9738519,
+      "name": "Max Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738520,
+      "name": "Min Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738521,
+      "name": "Overflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738522,
+      "name": "Underflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738523,
+      "name": "Overly Long Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738524,
+      "name": "Overly Short Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738525,
+      "name": "Broken Object Level Authorization",
+      "description": "Users access or manipulate data objects without proper authorization."
+    },
+    {
+      "id": 9738526,
+      "name": "Access Control",
+      "description": "Restricting resources and actions users can access based on roles, permissions, or attributes."
+    },
+    {
+      "id": 9738527,
+      "name": "Auth Failures",
+      "description": "Authentication is weak, misconfigured, or bypassed, allowing unauthorized access."
+    },
+    {
+      "id": 9738528,
+      "name": "SQL Injection",
+      "description": "Insert malicious SQL code into input fields to test for SQL injection vulnerabilities."
+    },
+    {
+      "id": 9738529,
+      "name": "XSS Injection",
+      "description": "Inject JavaScript or HTML tags to test for cross-site scripting vulnerabilities."
+    },
+    {
+      "id": 9738530,
+      "name": "Fuzzy Input",
+      "description": "Send large or randomly generated payloads to test input validation and stability."
+    },
+    {
+      "id": 9738531,
+      "name": "Command Injection",
+      "description": "Insert shell commands into inputs to test for command execution vulnerabilities."
+    },
+    {
+      "id": 9738532,
+      "name": "JSON Injection",
+      "description": "Insert malicious or unexpected JSON structures to test parsing and validation."
+    },
+    {
+      "id": 9738533,
+      "name": "NoSQL Injection",
+      "description": "Provide NoSQL-specific malicious queries or operators to test for injection vulnerabilities."
+    },
+    {
+      "id": 9738534,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1515158",
+      "name": "Movimientos Inventario",
+      "description": "",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
