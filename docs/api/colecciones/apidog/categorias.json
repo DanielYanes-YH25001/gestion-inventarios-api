@@ -1,0 +1,1544 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Gestión Inventarios API",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "projectSetting": {
+    "id": "1406712",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "allowAutomationWriteAutomationCreatedSprintBranch": true,
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW",
+        "enableHierarchicalSlug": false
+      },
+      "folderShareExpandModeSettings": {
+        "expandId": [],
+        "mode": "AUTO"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server",
+        "moduleId": 1505613
+      },
+      {
+        "id": "1505614",
+        "name": "Default Server",
+        "moduleId": 1505614
+      },
+      {
+        "id": "1506674",
+        "name": "Default Server",
+        "moduleId": 1506674
+      },
+      {
+        "id": "1506744",
+        "name": "Default Server",
+        "moduleId": 1506744
+      },
+      {
+        "id": "1506757",
+        "name": "Default Server",
+        "moduleId": 1506757
+      },
+      {
+        "id": "1515158",
+        "name": "Default Server",
+        "moduleId": 1515158
+      }
+    ],
+    "cloudMock": {
+      "enable": false,
+      "security": "free",
+      "tokenKey": "apidogToken",
+      "isCreatedAutomaticallyByDefaultConfigFromAdmin": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 11308136,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 1505613,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Consulta Categorías",
+          "api": {
+            "id": "46271011",
+            "method": "get",
+            "path": "",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {
+              "type": "noauth",
+              "noauth": {}
+            },
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "179035878",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/18568963"
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": false,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "Operación **GET** para listar todas las Categorías registradas.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 6,
+            "cases": [
+              {
+                "id": 62436142,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "179035878",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": "{\"id\":\"temp.1d485df9-5ff8-42b9-940c-7770abba7e4f\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"1d485df9-5ff8-42b9-940c-7770abba7e4f\",\"requestIndex\":0,\"httpRequestId\":\"5ebfafaf-e5f8-4f6a-a275-07478533895f\"},\"type\":\"http\",\"response\":{\"id\":\"77bbf9f9-c580-4084-863e-7a1720af98f1\",\"status\":\"OK\",\"code\":200,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:00:21 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[91,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,49,44,34,110,111,109,98,114,101,34,58,34,67,97,109,105,115,101,116,97,115,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,67,97,109,105,115,97,115,44,32,99,97,109,105,115,101,116,97,115,32,99,97,115,117,97,108,101,115,32,121,32,116,111,112,115,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,50,44,34,110,111,109,98,114,101,34,58,34,80,97,110,116,97,108,111,110,101,115,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,74,101,97,110,115,44,32,112,97,110,116,97,108,111,110,101,115,32,100,101,32,118,101,115,116,105,114,32,121,32,115,104,111,114,116,115,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,51,44,34,110,111,109,98,114,101,34,58,34,67,97,108,122,97,100,111,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,90,97,112,97,116,111,115,32,102,111,114,109,97,108,101,115,44,32,122,97,112,97,116,105,108,108,97,115,32,121,32,115,97,110,100,97,108,105,97,115,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,52,44,34,110,111,109,98,114,101,34,58,34,82,111,112,97,32,100,101,112,111,114,116,105,118,97,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,80,114,101,110,100,97,115,32,112,97,114,97,32,101,110,116,114,101,110,97,109,105,101,110,116,111,32,121,32,97,99,116,105,118,105,100,97,100,32,102,195,173,115,105,99,97,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,53,44,34,110,111,109,98,114,101,34,58,34,65,99,99,101,115,111,114,105,111,115,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,67,105,110,116,117,114,111,110,101,115,44,32,103,111,114,114,97,115,44,32,98,117,102,97,110,100,97,115,32,121,32,99,111,109,112,108,101,109,101,110,116,111,115,32,100,101,32,118,101,115,116,105,114,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,54,44,34,110,111,109,98,114,101,34,58,34,65,98,114,105,103,111,115,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,67,104,97,113,117,101,116,97,115,44,32,115,117,195,169,116,101,114,101,115,32,121,32,112,114,101,110,100,97,115,32,112,97,114,97,32,99,108,105,109,97,32,102,114,101,115,99,111,34,125,44,123,34,105,100,67,97,116,101,103,111,114,105,97,34,58,55,44,34,110,111,109,98,114,101,34,58,34,67,111,115,109,195,169,116,105,99,111,115,34,44,34,100,101,115,99,114,105,112,99,105,111,110,34,58,34,67,97,116,101,103,111,114,195,173,97,32,100,101,32,67,111,115,109,195,169,116,105,99,111,115,34,125,93]},\"cookie\":[],\"responseTime\":9,\"responseSize\":680,\"downloadedBytes\":680,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.4937999998219311,\"wait\":0.22319999989122152,\"dns\":0,\"tcp\":0,\"firstByte\":7.536700000055134,\"download\":0.812600000295788,\"process\":0.1171999997459352,\"total\":9.18349999981001}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"categorias\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"GET\",\"baseUrl\":\"http://localhost:8080/api/categorias\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":54701},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"GET\",\"href\":\"http://localhost:8080/api/categorias\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":200,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:00:21 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":680},\"timings\":{\"start\":1793397621102,\"requestStart\":1793397621103,\"offset\":{\"request\":0.4937999998219311,\"socket\":0.7169999997131526,\"response\":8.253699999768287,\"end\":9.066300000064075,\"lookup\":0.7169999997131526,\"connect\":0.7169999997131526,\"done\":9.18349999981001}},\"session\":{\"id\":\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\",\"reused\":true}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1793397621082,\"preProcessorsStarted\":1793397621083,\"preProcessorsCompleted\":1793397621083,\"postProcessorsStarted\":1793397621115,\"postProcessorsCompleted\":1793397621115,\"completed\":1793397621115},\"metaInfo\":{\"httpApiId\":46271011,\"httpApiCaseId\":62436142,\"httpApiName\":\"Consulta Categorías\",\"httpApiPath\":\"\",\"httpApiMethod\":\"get\",\"httpApiCaseName\":\"Success\",\"moduleId\":1505613,\"serverId\":\"default\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505613,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Consulta Categoría",
+          "api": {
+            "id": "46271729",
+            "method": "get",
+            "path": "/{id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "ID de Categoría",
+                  "type": "integer",
+                  "enable": true,
+                  "example": "1",
+                  "schema": {
+                    "type": "integer"
+                  }
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {
+              "type": "noauth",
+              "noauth": {}
+            },
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "179035878",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M6760MV4G247BYZB18JD97R6"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M6760MV4G247BYZB18JD97R6": {
+                      "$ref": "#/definitions/18568963"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "182129467",
+                "code": "404",
+                "name": "Categoría no encontrada",
+                "headers": [],
+                "jsonSchema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "x-apidog-orders": [
+                    "error"
+                  ],
+                  "required": [
+                    "error"
+                  ]
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": false,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "Operación **GET** para obtener una Categoría registrada utilizando su ID.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 12,
+            "cases": [
+              {
+                "id": 62505278,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "179035878",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "1",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {
+                  "type": "noauth",
+                  "noauth": {}
+                },
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 62505279,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "182129467",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {
+                  "type": "noauth",
+                  "noauth": {}
+                },
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.02a4795d-eee7-498e-bef4-e2d2ac4c464a\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"02a4795d-eee7-498e-bef4-e2d2ac4c464a\",\"requestIndex\":0,\"httpRequestId\":\"efe38e1f-86e1-4f64-b5ed-6d7cb7d2ab48\"},\"type\":\"http\",\"response\":{\"id\":\"545f3bf1-d6cb-4f67-a0fd-8ff49ab8588c\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 21:33:30 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,101,114,114,111,114,34,58,34,52,48,52,32,78,79,84,95,70,79,85,78,68,32,92,34,67,97,116,101,103,111,114,195,173,97,32,110,111,32,101,110,99,111,110,116,114,97,100,97,92,34,34,125]},\"cookie\":[],\"responseTime\":17,\"responseSize\":54,\"downloadedBytes\":54,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"categorias\",\"100\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"GET\",\"baseUrl\":\"http://localhost:8080/api/categorias\",\"body\":{},\"auth\":{\"type\":\"noauth\",\"noauth\":[]},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"eb0fe3cb-6437-46f9-8ea9-c99f393b5fca\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":59946},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"GET\",\"href\":\"http://localhost:8080/api/categorias/100\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 21:33:30 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":54},\"timings\":{\"start\":1793396010698,\"requestStart\":1793396010699,\"offset\":{\"request\":1.1251999998930842,\"socket\":2.9416999998502433,\"lookup\":3.3089999998919666,\"connect\":4.0364999999292195,\"response\":15.343599999789149,\"end\":17.188799999887124,\"done\":17.428199999965727}},\"session\":{\"id\":\"eb0fe3cb-6437-46f9-8ea9-c99f393b5fca\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1793396010647,\"preProcessorsStarted\":1793396010663,\"preProcessorsCompleted\":1793396010663,\"postProcessorsStarted\":1793396010720,\"postProcessorsCompleted\":1793396010720,\"completed\":1793396010722},\"metaInfo\":{\"httpApiId\":46271729,\"httpApiCaseId\":62505279,\"httpApiName\":\"Consulta Categoría\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"get\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1505613,\"serverId\":\"default\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505613,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Registrar Categoría",
+          "api": {
+            "id": "46271012",
+            "method": "post",
+            "path": "",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "164893886",
+                "code": "201",
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M676TPTAAW6NTR23BXX5YAXF"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M676TPTAAW6NTR23BXX5YAXF": {
+                      "$ref": "#/definitions/18568963"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "139207653",
+                "code": "400",
+                "name": "Body incorrecto",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M67YKAM3ZRXVEZJGG2JNKENS"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M67YKAM3ZRXVEZJGG2JNKENS": {
+                      "$ref": "#/definitions/18571886"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nombre",
+                  "descripcion"
+                ],
+                "x-apidog-orders": [
+                  "nombre",
+                  "descripcion"
+                ]
+              },
+              "required": false,
+              "mediaType": "",
+              "examples": [
+                {
+                  "value": "{\r\n  \"nombre\": \"Cosméticos\",\r\n  \"descripcion\": \"Categoría de Cosméticos\"\r\n}",
+                  "mediaType": "application/json",
+                  "description": ""
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "Operación **POST** para registrar una nueva Categoría.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 24,
+            "cases": [
+              {
+                "id": 62436143,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "164893886",
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"nombre\": \"Cosméticos\",\r\n  \"descripcion\": \"Categoría de Cosméticos\"\r\n}",
+                  "type": "application/json",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62505516,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": " Wrong Params",
+                "responseId": "139207653",
+                "parameters": {
+                  "query": [],
+                  "path": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"$$$$\": \"$$$$\",\r\n  \"@@@@\": \"@@@@\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.0df1ac5b-0064-4633-8543-7dfc133d0f05\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"0df1ac5b-0064-4633-8543-7dfc133d0f05\",\"requestIndex\":0,\"httpRequestId\":\"beae66e5-b39f-4cde-b46e-1706d06cff77\"},\"type\":\"http\",\"response\":{\"id\":\"ae219645-09f8-404b-b928-32dad9bcea46\",\"status\":\"Bad Request\",\"code\":400,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 21:58:03 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,110,111,109,98,114,101,34,58,34,69,108,32,110,111,109,98,114,101,32,100,101,32,108,97,32,99,97,116,101,103,111,114,195,173,97,32,101,115,32,114,101,113,117,101,114,105,100,111,34,125]},\"cookie\":[],\"responseTime\":292,\"responseSize\":52,\"downloadedBytes\":52,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"categorias\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true},{\"key\":\"Content-Length\",\"value\":41,\"system\":true}],\"method\":\"POST\",\"baseUrl\":\"http://localhost:8080/api/categorias\",\"body\":{\"mode\":\"raw\",\"raw\":\"{\\r\\n  \\\"$$$$\\\": \\\"$$$$\\\",\\r\\n  \\\"@@@@\\\": \\\"@@@@\\\"\\r\\n}\",\"generateMode\":\"normal\",\"type\":\"application/json\"},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"b3e4369b-af22-45a4-976f-a020f939e5d1\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":56727},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"POST\",\"href\":\"http://localhost:8080/api/categorias\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"},{\"key\":\"Content-Length\",\"value\":\"41\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":400,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 21:58:03 GMT\"},{\"key\":\"Connection\",\"value\":\"close\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":52},\"timings\":{\"start\":1793397482992,\"requestStart\":1793397482993,\"offset\":{\"request\":0.8636000002734363,\"socket\":2.047400000039488,\"lookup\":2.4904999998398125,\"connect\":3.065500000026077,\"response\":290.3851999999024,\"end\":292.52270000008866,\"done\":292.57929999986663}},\"session\":{\"id\":\"b3e4369b-af22-45a4-976f-a020f939e5d1\",\"reused\":false}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1793397482963,\"preProcessorsStarted\":1793397482968,\"preProcessorsCompleted\":1793397482968,\"postProcessorsStarted\":1793397483290,\"postProcessorsCompleted\":1793397483290,\"completed\":1793397483295},\"metaInfo\":{\"httpApiId\":46271012,\"httpApiCaseId\":62505516,\"httpApiName\":\"Registrar Categoría\",\"httpApiPath\":\"\",\"httpApiMethod\":\"post\",\"httpApiCaseName\":\" Wrong Params\",\"moduleId\":1505613,\"serverId\":\"default\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505613,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Actualizar Categoría",
+          "api": {
+            "id": "46271013",
+            "method": "put",
+            "path": "/{id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "string",
+                  "enable": true
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "194526655",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M676WSG2QTYDZPKMBG86HMG0"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M676WSG2QTYDZPKMBG86HMG0": {
+                      "$ref": "#/definitions/18568963"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "115873284",
+                "code": "404",
+                "name": "Categoría no encontrada",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M67YGE94XN1XM8S9RVPHKT87"
+                  ],
+                  "x-apidog-refs": {
+                    "01M67YGE94XN1XM8S9RVPHKT87": {
+                      "$ref": "#/definitions/18571886"
+                    }
+                  },
+                  "required": []
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              },
+              {
+                "id": "115581557",
+                "code": "400",
+                "name": "Body incorrecto",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M67YGSQ4XJ4F8J168SHJ4TTV"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M67YGSQ4XJ4F8J168SHJ4TTV": {
+                      "$ref": "#/definitions/18571886"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "application/json",
+              "parameters": [],
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "nombre",
+                  "descripcion"
+                ],
+                "x-apidog-orders": [
+                  "nombre",
+                  "descripcion"
+                ]
+              },
+              "required": false,
+              "mediaType": "",
+              "examples": [
+                {
+                  "value": "{\r\n  \"nombre\": \"Pantalones\",\r\n  \"descripcion\": \"Jeans y pantalones de vestir\"\r\n}",
+                  "mediaType": "application/json",
+                  "description": ""
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "Operación **PUT** para actualizar un registro completo de Categoría utilizando su ID.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 36,
+            "cases": [
+              {
+                "id": 62436144,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "194526655",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "2",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"nombre\": \"Pantalones\",\r\n  \"descripcion\": \"Jeans y pantalones de vestir\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62505361,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "115873284",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"nombre\": \"Pantalones\",\r\n  \"descripcion\": \"Jeans y pantalones de vestir\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              },
+              {
+                "id": 62505650,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": " Wrong Params",
+                "responseId": "115581557",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "1",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\r\n  \"$$$$\": \"$$$$\",\r\n  \"@@@@\": \"@@@@\"\r\n}",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505613,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Remover Categoría",
+          "api": {
+            "id": "46271014",
+            "method": "delete",
+            "path": "/{id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "id#0",
+                  "name": "id",
+                  "required": true,
+                  "description": "",
+                  "type": "string",
+                  "enable": true
+                }
+              ],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "136449134",
+                "code": "204",
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M6773W4T28XSQTTV4EC7HDE7"
+                  ],
+                  "required": [],
+                  "x-apidog-refs": {
+                    "01M6773W4T28XSQTTV4EC7HDE7": {
+                      "$ref": "#/definitions/18568963"
+                    }
+                  }
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "noContent",
+                "mediaType": ""
+              },
+              {
+                "id": "168176512",
+                "code": "404",
+                "name": "Categoría no encontrada",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": [
+                    "01M67YEVAX0PDRWYB0C3S0PQB5"
+                  ],
+                  "x-apidog-refs": {
+                    "01M67YEVAX0PDRWYB0C3S0PQB5": {
+                      "$ref": "#/definitions/18571886"
+                    }
+                  },
+                  "required": []
+                },
+                "itemSchema": {},
+                "description": "",
+                "contentType": "json",
+                "mediaType": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "required": false,
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "Operación **DELETE** para remover una Categoría utilizando su ID.",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 48,
+            "cases": [
+              {
+                "id": 62436145,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Success",
+                "responseId": "136449134",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "3",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": "{\"id\":\"temp.2f88d649-02c5-4b3d-8234-921f108fe336\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"2f88d649-02c5-4b3d-8234-921f108fe336\",\"requestIndex\":0,\"httpRequestId\":\"ed41f5b4-257c-4670-87c3-89a076a65b04\"},\"type\":\"http\",\"response\":{\"id\":\"0ed21687-fa36-408a-9d67-bab60d2eac0a\",\"status\":\"No Content\",\"code\":204,\"header\":[{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:01:36 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[]},\"cookie\":[],\"responseTime\":54,\"responseSize\":0,\"downloadedBytes\":0,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.6484000002965331,\"wait\":0.2763000000268221,\"dns\":0,\"tcp\":0,\"firstByte\":52.500899999868125,\"download\":0.6792000001296401,\"process\":0.1425000000745058,\"total\":54.247300000395626}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"categorias\",\"7\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"DELETE\",\"baseUrl\":\"http://localhost:8080/api/categorias\",\"body\":{},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":54701},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"DELETE\",\"href\":\"http://localhost:8080/api/categorias/7\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":204,\"headers\":[{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:01:36 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":0},\"timings\":{\"start\":1793397696614,\"requestStart\":1793397696614,\"offset\":{\"request\":0.6484000002965331,\"socket\":0.9247000003233552,\"response\":53.42560000019148,\"end\":54.10480000032112,\"lookup\":0.9247000003233552,\"connect\":0.9247000003233552,\"done\":54.247300000395626}},\"session\":{\"id\":\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\",\"reused\":true}}]}},\"responseValidation\":{\"responseCode\":{\"valid\":true}},\"passed\":true,\"timings\":{\"started\":1793397696608,\"preProcessorsStarted\":1793397696609,\"preProcessorsCompleted\":1793397696609,\"postProcessorsStarted\":1793397696670,\"postProcessorsCompleted\":1793397696670,\"completed\":1793397696671},\"metaInfo\":{\"httpApiId\":46271014,\"httpApiCaseId\":62436145,\"httpApiName\":\"Remover Categoría\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"delete\",\"httpApiCaseName\":\"Success\",\"moduleId\":1505613,\"serverId\":\"default\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                },
+                "inheritPreProcessors": {
+                  "enable": {},
+                  "defaultEnable": {}
+                }
+              },
+              {
+                "id": 62505500,
+                "type": "DEBUG_CASE",
+                "path": null,
+                "name": "Record Not Found",
+                "responseId": "168176512",
+                "parameters": {
+                  "query": [],
+                  "path": [
+                    {
+                      "id": "id#0",
+                      "name": "id",
+                      "relatedId": "id#0",
+                      "enable": true,
+                      "isDelete": false,
+                      "value": "100",
+                      "relatedName": "id"
+                    }
+                  ],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "header": [],
+                  "cookie": []
+                },
+                "requestBody": {
+                  "parameters": [],
+                  "data": "",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {},
+                  "isDefaultUrlEncoding": 3,
+                  "disableUrlEncoding": false
+                },
+                "requestResult": "{\"id\":\"temp.a71cc035-6891-4795-b545-9d2a21fb6398\",\"cursor\":{\"position\":0,\"iteration\":0,\"length\":1,\"cycles\":1,\"empty\":false,\"eof\":false,\"bof\":true,\"cr\":false,\"ref\":\"a71cc035-6891-4795-b545-9d2a21fb6398\",\"requestIndex\":0,\"httpRequestId\":\"0ba85509-866b-413a-a370-d2ffdd9fdd81\"},\"type\":\"http\",\"response\":{\"id\":\"cc41d7a9-ea79-4ec3-be68-113c12d6c359\",\"status\":\"Not Found\",\"code\":404,\"header\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:00:39 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"trailer\":[],\"stream\":{\"type\":\"Buffer\",\"data\":[123,34,101,114,114,111,114,34,58,34,52,48,52,32,78,79,84,95,70,79,85,78,68,32,92,34,67,97,116,101,103,111,114,195,173,97,32,110,111,32,101,110,99,111,110,116,114,97,100,97,92,34,34,125]},\"cookie\":[],\"responseTime\":11,\"responseSize\":54,\"downloadedBytes\":54,\"type\":\"http\",\"tempFilePath\":\"\",\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}},\"timingPhases\":{\"prepare\":0.8827999997884035,\"wait\":0.3563000001013279,\"dns\":0,\"tcp\":0,\"firstByte\":9.559499999973923,\"download\":0.7519999998621643,\"process\":0.11569999996572733,\"total\":11.666299999691546}},\"request\":{\"url\":{\"protocol\":\"http\",\"port\":\"8080\",\"path\":[\"api\",\"categorias\",\"100\"],\"host\":[\"localhost\"],\"query\":[],\"variable\":[]},\"header\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\",\"system\":true},{\"key\":\"Host\",\"value\":\"localhost:8080\",\"system\":true},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\",\"system\":true},{\"key\":\"Connection\",\"value\":\"keep-alive\",\"system\":true}],\"method\":\"DELETE\",\"baseUrl\":\"http://localhost:8080/api/categorias\",\"body\":{},\"type\":\"http\"},\"history\":{\"execution\":{\"verbose\":true,\"sessions\":{\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\":{\"addresses\":{\"local\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":54701},\"remote\":{\"address\":\"::1\",\"family\":\"IPv6\",\"port\":8080}}}},\"data\":[{\"request\":{\"method\":\"DELETE\",\"href\":\"http://localhost:8080/api/categorias/100\",\"headers\":[{\"key\":\"User-Agent\",\"value\":\"Apidog/1.0.0 (https://apidog.com)\"},{\"key\":\"Accept\",\"value\":\"*/*\"},{\"key\":\"Host\",\"value\":\"localhost:8080\"},{\"key\":\"Accept-Encoding\",\"value\":\"gzip, deflate, br\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\"},\"response\":{\"statusCode\":404,\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"key\":\"Date\",\"value\":\"Fri, 30 Oct 2026 22:00:39 GMT\"},{\"key\":\"Keep-Alive\",\"value\":\"timeout=60\"},{\"key\":\"Connection\",\"value\":\"keep-alive\"}],\"httpVersion\":\"1.1\",\"downloadedBytes\":54},\"timings\":{\"start\":1793397639568,\"requestStart\":1793397639569,\"offset\":{\"request\":0.8827999997884035,\"socket\":1.2390999998897314,\"response\":10.798599999863654,\"end\":11.550599999725819,\"lookup\":1.2390999998897314,\"connect\":1.2390999998897314,\"done\":11.666299999691546}},\"session\":{\"id\":\"eb64352f-d74e-41d9-bfb0-0ff1f53d727c\",\"reused\":true}}]}},\"responseValidation\":{\"schema\":{\"valid\":true,\"message\":\"\",\"errors\":null},\"responseCode\":{\"valid\":true}},\"passed\":false,\"timings\":{\"started\":1793397639536,\"preProcessorsStarted\":1793397639536,\"preProcessorsCompleted\":1793397639536,\"postProcessorsStarted\":1793397639584,\"postProcessorsCompleted\":1793397639584,\"completed\":1793397639586},\"metaInfo\":{\"httpApiId\":46271014,\"httpApiCaseId\":62505500,\"httpApiName\":\"Remover Categoría\",\"httpApiPath\":\"/{id}\",\"httpApiMethod\":\"delete\",\"httpApiCaseName\":\"Record Not Found\",\"moduleId\":1505613,\"serverId\":\"default\"},\"socketSession\":{\"addresses\":{\"local\":\"::1\",\"remote\":\"::1\"},\"httpVersion\":\"1.1\",\"tls\":{\"protocol\":\"\",\"cipherName\":\"\"},\"cert\":{\"subjectCN\":\"\",\"issuerCN\":\"\",\"validUntil\":\"\"}}}",
+                "visibility": "INHERITED",
+                "moduleId": 1505613,
+                "categoryId": 0,
+                "tagIds": [],
+                "apiTestDataList": [],
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [],
+            "visibility": "INHERITED",
+            "moduleId": 1505613,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "mcpClientCollection": [],
+  "responseCollection": [],
+  "schemaCollection": [
+    {
+      "id": 3878841,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 1505613,
+      "items": [
+        {
+          "name": "Categoría",
+          "displayName": "",
+          "id": "#/definitions/18568963",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "idCategoria": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                }
+              },
+              "x-apidog-orders": [
+                "idCategoria",
+                "nombre",
+                "descripcion"
+              ],
+              "required": [
+                "idCategoria",
+                "nombre",
+                "descripcion"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1505613
+        },
+        {
+          "name": "Error de Respuesta",
+          "displayName": "",
+          "id": "#/definitions/18571886",
+          "description": "",
+          "schema": {
+            "jsonSchema": {
+              "type": "object",
+              "properties": {
+                "timestamp": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "error": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ],
+              "x-apidog-orders": [
+                "timestamp",
+                "status",
+                "error",
+                "message",
+                "path"
+              ]
+            }
+          },
+          "visibility": "INHERITED",
+          "moduleId": 1505613
+        }
+      ]
+    }
+  ],
+  "securitySchemeCollection": [],
+  "oasComponentCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.11163251"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [
+    {
+      "id": "1406697",
+      "variables": [
+        {
+          "name": "test",
+          "securityType": "default",
+          "value": "test",
+          "description": "",
+          "isBindInitial": true,
+          "initialValue": "test",
+          "isSync": true
+        }
+      ]
+    }
+  ],
+  "commonParameters": null,
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 1971332,
+      "name": "Positive",
+      "description": "Valid inputs and correct expected results, representing typical usage."
+    },
+    {
+      "id": 1971333,
+      "name": "Negative",
+      "description": "Negative, invalid inputs such as missing fields, wrong types, unsupported methods, etc."
+    },
+    {
+      "id": 1971334,
+      "name": "Boundary",
+      "description": "Extreme or edge conditions, such as maximum string length, empty values, zero, null, etc."
+    },
+    {
+      "id": 1971335,
+      "name": "Security",
+      "description": "Test cases that may expose API security risks."
+    },
+    {
+      "id": 1971336,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectTestCaseTags": [
+    {
+      "id": 9738506,
+      "name": "Required Fields Only",
+      "description": "Send only the required fields with valid values, omitting all optional fields, to test minimal valid requests."
+    },
+    {
+      "id": 9738507,
+      "name": "Valid Semantic",
+      "description": "Use values that are syntactically correct and also make sense in the business logic or domain context."
+    },
+    {
+      "id": 9738508,
+      "name": "Enum Combination Coverage",
+      "description": "For all enum-type parameters, apply orthogonal design to systematically construct test case combinations of parameters and their enum values, dedicated to testing enum coverage."
+    },
+    {
+      "id": 9738509,
+      "name": "Other Positive Case",
+      "description": "Provide realistic and valid inputs that match the API specification, producing the correct and expected result."
+    },
+    {
+      "id": 9738510,
+      "name": "Missing Required Fields",
+      "description": "Omit one or more required fields in the request body or parameters."
+    },
+    {
+      "id": 9738511,
+      "name": "Invalid Values",
+      "description": "Provide values that are within the correct type and format, but logically invalid for the field."
+    },
+    {
+      "id": 9738512,
+      "name": "Type Errors",
+      "description": "Use values with incorrect data types, such as sending a string instead of an integer."
+    },
+    {
+      "id": 9738513,
+      "name": "Format Errors",
+      "description": "Provide values in an incorrect format, e.g., wrong date pattern, malformed email address."
+    },
+    {
+      "id": 9738514,
+      "name": "Semantic Errors",
+      "description": "Use syntactically correct and properly formatted values that are logically impossible or violate domain rules."
+    },
+    {
+      "id": 9738515,
+      "name": "Other Negative Case",
+      "description": "Provide invalid or unexpected inputs that should trigger error handling or rejection by the API."
+    },
+    {
+      "id": 9738516,
+      "name": "Null",
+      "description": "Must be the JSON literal `null` (not empty, not \"null\")."
+    },
+    {
+      "id": 9738517,
+      "name": "Zero",
+      "description": "Must be the numeric literal 0."
+    },
+    {
+      "id": 9738518,
+      "name": "Empty Values",
+      "description": "Must be \"\"."
+    },
+    {
+      "id": 9738519,
+      "name": "Max Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738520,
+      "name": "Min Values",
+      "description": "Provide the exact minimum and maximum allowed values for numeric or date fields."
+    },
+    {
+      "id": 9738521,
+      "name": "Overflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738522,
+      "name": "Underflow",
+      "description": "Provide values just beyond the allowed minimum or maximum boundaries."
+    },
+    {
+      "id": 9738523,
+      "name": "Overly Long Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738524,
+      "name": "Overly Short Strings",
+      "description": "Provide strings longer than the maximum allowed length, or shorter than the minimum required length."
+    },
+    {
+      "id": 9738525,
+      "name": "Broken Object Level Authorization",
+      "description": "Users access or manipulate data objects without proper authorization."
+    },
+    {
+      "id": 9738526,
+      "name": "Access Control",
+      "description": "Restricting resources and actions users can access based on roles, permissions, or attributes."
+    },
+    {
+      "id": 9738527,
+      "name": "Auth Failures",
+      "description": "Authentication is weak, misconfigured, or bypassed, allowing unauthorized access."
+    },
+    {
+      "id": 9738528,
+      "name": "SQL Injection",
+      "description": "Insert malicious SQL code into input fields to test for SQL injection vulnerabilities."
+    },
+    {
+      "id": 9738529,
+      "name": "XSS Injection",
+      "description": "Inject JavaScript or HTML tags to test for cross-site scripting vulnerabilities."
+    },
+    {
+      "id": 9738530,
+      "name": "Fuzzy Input",
+      "description": "Send large or randomly generated payloads to test input validation and stability."
+    },
+    {
+      "id": 9738531,
+      "name": "Command Injection",
+      "description": "Insert shell commands into inputs to test for command execution vulnerabilities."
+    },
+    {
+      "id": 9738532,
+      "name": "JSON Injection",
+      "description": "Insert malicious or unexpected JSON structures to test parsing and validation."
+    },
+    {
+      "id": 9738533,
+      "name": "NoSQL Injection",
+      "description": "Provide NoSQL-specific malicious queries or operators to test for injection vulnerabilities."
+    },
+    {
+      "id": 9738534,
+      "name": "Other",
+      "description": "Test cases not classified under existing categories."
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "1505613",
+      "name": "Categorias",
+      "description": "CRUD operacional sobre las Categorías. Incluyendo peticiones **GET**, **POST**, **PUT** y **DELETE**.",
+      "moduleVariables": [],
+      "openApiInfo": {}
+    }
+  ]
+}
