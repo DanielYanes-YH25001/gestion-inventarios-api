@@ -170,29 +170,32 @@ La API quedará disponible en `http://localhost:8080`.
   ```
 
 * **Despliegue en Kubernetes:**
-  Los manifiestos base se encuentran en `k8s/base/` (`deployment.yaml` y `kustomization.yaml`) y pueden aplicarse mediante:
+  Los manifiestos usan Kustomize: `k8s/base/` contiene los recursos comunes y
+  `k8s/overlays/` define las configuraciones local y de producción. Para aplicar
+  manualmente el entorno local:
 
   ```
-  kubectl apply -k k8s/base
+  kubectl apply -k k8s/overlays/local
   ```
 
-### CI/CD local con Act
+#### Automatizar el despliegue local con Act
 
-La automatización local está definida en `.github/workflows/ci-cd-local.yml`.
-El pipeline ejecuta las pruebas JUnit, empaqueta la aplicación, construye la imagen
-Docker y despliega los manifiestos de Kubernetes.
+También puedes ejecutar el flujo local de CI/CD con [Act](https://nektosact.com/).
+Necesitas Docker y Act, un clúster Kubernetes local accesible, y `kubectl`
+disponible dentro del runner de Act. Guarda el kubeconfig del clúster en
+`.kube-local/config`; este archivo está excluido de Git y el workflow lo utiliza
+para conectarse al clúster.
 
-El workflow está pensado para ejecutarse localmente con Act y usa
-`.kube-local/config`, que no debe publicarse. Los datos de PostgreSQL se guardan
-en `.kind-data/postgres`. La guía de reinicio o limpieza de esos datos y del
-clúster local se mantiene en el script `scripts/local-ci.sh`.
+Desde la raíz del proyecto, inicia el workflow con:
 
-Los manifiestos siguen la convención de Kustomize: `k8s/base` contiene los
-recursos comunes de la API; `k8s/overlays/local` añade kind y PostgreSQL local;
-`k8s/overlays/production` configura la API para conectarse a un PostgreSQL
-administrado aparte y no crea una base de datos. El overlay local usa
-`imagePullPolicy: Never` porque la imagen se carga directamente en kind; el
-base usa `IfNotPresent` para permitir imágenes ya disponibles en otros entornos.
+```
+act workflow_dispatch -W .github/workflows/ci-cd-local.yml
+```
+
+El workflow ejecuta las pruebas, construye la imagen Docker, verifica el acceso
+al clúster y delega el despliegue en `scripts/local-cd.sh`. Este script aplica
+`k8s/overlays/local` y espera a que se completen los despliegues de PostgreSQL y
+de la API.
 
 ## 📖 Documentación Interactiva (Swagger / OpenAPI)
 
