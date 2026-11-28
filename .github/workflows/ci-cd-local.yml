@@ -1,0 +1,53 @@
+name: CI/CD Local
+
+on:
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: gestion-inventarios-api
+  IMAGE_TAG: latest
+  KUBECONFIG: ${{ github.workspace }}/.kube-local/config
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+
+      - name: Ejecutar pruebas JUnit
+        run: ./gradlew test --no-daemon
+
+      - name: Construir imagen Docker
+        run: docker build --tag "$IMAGE_NAME:$IMAGE_TAG" .
+
+      - name: Verificar kubectl disponible en el runner local
+        shell: bash
+        run: |
+          command -v kubectl || {
+            echo "::error::kubectl no está montado en el runner de Act. Ejecute Act con el volumen de kubectl del host."
+            exit 1
+          }
+          kubectl version --client
+
+      - name: Verificar configuración local de Kubernetes
+        shell: bash
+        run: |
+          test -f "$KUBECONFIG" || {
+            echo "::error::No existe $KUBECONFIG. Copie su kubeconfig a .kube-local/config."
+            exit 1
+          }
+          kubectl config current-context
+          kubectl cluster-info
+
+      - name: Cargar imagen y desplegar
+        shell: bash
+        run: bash ./scripts/local-cd.sh

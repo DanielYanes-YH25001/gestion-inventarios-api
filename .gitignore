@@ -35,3 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Kubernetes configuration ###
+.env
+.kube-local/config
+.kind-local-config.yaml
+.kind-data/

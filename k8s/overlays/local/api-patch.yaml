@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestion-inventarios-api
+spec:
+  template:
+    spec:
+      containers:
+        - name: gestion-inventarios-api
+          imagePullPolicy: Never
