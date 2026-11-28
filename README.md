@@ -5,9 +5,9 @@
 Esta **API RESTful** está diseñada para la **Gestión Integral de Inventarios**. Su arquitectura modular contempla los siguientes módulos operativos:
 
 - **Módulo de Catálogo:** Administración CRUD (GET, POST, PUT, DELETE) de productos, categorías y proveedores.
-- **Módulo de Inventario y Sucursales:** Control dinámico de existencias físicas por sucursal mediante operaciones de incremento y decremento de stock.
-- **Módulo de Transacciones:** Registro inmutable de movimientos (entradas y salidas) y trazabilidad de transferencias entre sucursales.
-- **Módulo de Seguridad:** Autenticación de usuarios, gestión de roles y asignación de privilegios sobre el sistema.
+- **Módulo de Inventario y Sucursales:** Consulta de existencias por sucursal.
+- **Módulo de Movimientos:** Registro e historial de movimientos de inventario asociados a productos, sucursales y usuarios.
+- **Usuarios y roles:** El modelo contempla usuarios y roles para asociarlos a los movimientos; la API no implementa autenticación ni endpoints de administración de usuarios por el momento.
 
 ## 👥 Integrantes del Equipo de Desarrollo
 
@@ -26,9 +26,9 @@ Para compilar, probar y ejecutar este proyecto en un entorno local necesitas:
 
 * **Gestor de Construcción:** Gradle con Kotlin DSL (incluido mediante Gradle Wrapper `./gradlew`).
 
-* **Base de Datos:** PostgreSQL 14 o superior.
+* **Base de Datos:** PostgreSQL 18 o superior.
 
-* **Documentación OpenAPI:** `springdoc-openapi-starter-webmvc-ui` (v3.1.1).
+* **Documentación OpenAPI:** `springdoc-openapi-starter-webmvc-ui` (v3.2.0).
 
 * **Pruebas Unitarias:** JUnit 5 y Mockito.
 
@@ -38,50 +38,55 @@ Para compilar, probar y ejecutar este proyecto en un entorno local necesitas:
 
 ## 🏗️ Arquitectura y Estructura del Proyecto
 
-La aplicación implementa una **arquitectura en capas** bajo el patrón REST, separando la exposición de endpoints, la lógica de negocio, el mapeo de DTOs y el acceso a datos:
+La aplicación implementa una **arquitectura en capas** bajo el patrón REST: los controladores exponen los endpoints, los servicios contienen la lógica de negocio, los mappers convierten entidades y DTOs, y los repositorios acceden a los datos.
 
 ```
 gestion-inventarios-api/
+├── .github/
+│   └── workflows/
+│       └── ci-cd-local.yml                         # Pruebas, construcción de imagen y despliegue local
 ├── docs/
 │   ├── api/
 │   │   ├── openapi/
-│   │   │   └── openapi.json                         # Contrato OpenAPI 3 exportado
+│   │   │   └── openapi.json                        # Contrato OpenAPI exportado
 │   │   └── colecciones/
-│   │       └── apidog/                              # Colecciones de prueba por módulo
-│   │           ├── categorias.json
-│   │           ├── proveedores.json
-│   │           ├── productos.json
-│   │           ├── sucursales.json
-│   │           ├── stock_sucursales.json
-│   │           └── movimientos_inventario.json
+│   │       └── apidog/                             # Colecciones de prueba por módulo
 │   ├── db/
-│   │   ├── script_ddl_postgresql.sql                # Creación de tablas y restricciones
-│   │   └── script_insercion_registros_postgresql.sql # Datos iniciales de prueba
-│   └── diagramas/                                   # Diagramas ER, de clases y casos de uso
+│   │   ├── script_ddl_postgresql.sql               # Estructura de tablas
+│   │   └── script_insercion_registros_postgresql.sql # Datos iniciales
+│   └── diagramas/                                  # Diagramas ER, de clases y casos de uso
+├── gradle/
+│   └── wrapper/                                    # Archivos del Gradle Wrapper
 ├── k8s/
-│   └── base/
-│       ├── deployment.yaml                          # Manifiesto de despliegue en Kubernetes
-│       └── kustomization.yaml                       # Configuración de Kustomize
+│   ├── base/                                       # Deployment y Service comunes
+│   └── overlays/
+│       ├── local/                                  # API y PostgreSQL para entorno local
+│       └── production/                             # Configuración base para producción
+├── scripts/
+│   └── local-cd.sh                                 # Carga de imagen y despliegue local
 ├── src/
 │   ├── main/
 │   │   ├── java/ues/ids/poo/api/
-│   │   │   ├── config/                              # Configuración de OpenAPI (OpenApiConfig)
-│   │   │   ├── controller/                          # Controladores REST y HealthController
-│   │   │   ├── dto/                                 # Request y Response DTOs
-│   │   │   ├── enums/                               # Enumeraciones (TipoMovimiento, UsuarioRol)
-│   │   │   ├── exception/                           # Manejo global de errores (GlobalExceptionHandler)
-│   │   │   ├── mapper/                              # Conversión entre entidades y DTOs
-│   │   │   ├── model/                               # Entidades JPA (@Entity)
-│   │   │   ├── repository/                          # Repositorios Spring Data JPA
-│   │   │   └── service/                             # Lógica de negocio (@Service)
+│   │   │   ├── config/                             # Configuración OpenAPI
+│   │   │   ├── controller/                         # Controladores REST
+│   │   │   ├── dto/
+│   │   │   │   ├── request/                        # DTOs de entrada
+│   │   │   │   └── response/                       # DTOs de salida
+│   │   │   ├── enums/                              # TipoMovimiento y UsuarioRol
+│   │   │   ├── exception/                          # Manejo global de errores
+│   │   │   ├── mapper/                             # Conversión entre entidades y DTOs
+│   │   │   ├── model/                              # Entidades JPA
+│   │   │   ├── repository/                         # Repositorios Spring Data JPA
+│   │   │   └── service/                            # Lógica de negocio
 │   │   └── resources/
-│   │       └── application.properties               # Configuración de Spring Boot
+│   │       └── application.properties              # Configuración de Spring Boot
 │   └── test/
-│       └── java/ues/ids/poo/api/
-│           ├── controller/                          # Pruebas unitarias de controladores
-│           └── service/                             # Pruebas unitarias de servicios
-├── Dockerfile                                       # Imagen Docker de la aplicación
-├── build.gradle.kts                                 # Dependencias y configuración de Gradle
+│       └── java/ues/ids/poo/api/                   # Pruebas de controladores y servicios
+├── .actrc                                           # Configuración local de Act
+├── Dockerfile                                      # Imagen Docker de la aplicación
+├── build.gradle.kts                                # Dependencias y configuración de Gradle
+├── gradlew / gradlew.bat                           # Gradle Wrapper para Linux/macOS y Windows
+├── settings.gradle.kts
 └── README.md
 ```
 
@@ -99,7 +104,7 @@ Los diagramas de diseño y modelado del proyecto se encuentran disponibles en la
 
 ### 1. Inicializar la base de datos en PostgreSQL
 
-Crea una base de datos en tu instancia local de PostgreSQL (por ejemplo, `gestion_inventarios_db`) y ejecuta los scripts ubicados en `docs/db/` en el siguiente orden:
+Crea una base de datos en tu instancia local de PostgreSQL llamada `gestion_inventarios_db`. Para cargar el esquema y los datos de prueba, ejecuta los scripts de `docs/db/` en este orden:
 
 1. `docs/db/script_ddl_postgresql.sql` (estructura de tablas y llaves foráneas).
 
@@ -111,7 +116,7 @@ La conexión definida en `src/main/resources/application.properties` lee las cre
 
 | Variable | Descripción | Ejemplo Local |
 | ----- | ----- | ----- |
-| `DB_URL` | Cadena de conexión JDBC a PostgreSQL | `jdbc:postgresql://localhost:5432/gestion_inventarios_api` |
+| `DB_URL` | Cadena de conexión JDBC a PostgreSQL | `jdbc:postgresql://localhost:5432/gestion_inventarios_db` |
 | `DB_USERNAME` | Usuario de la base de datos | `postgres` |
 | `DB_PASSWORD` | Contraseña del usuario de PostgreSQL | `tu_contraseña_local` |
 
@@ -172,7 +177,10 @@ La API quedará disponible en `http://localhost:8080`.
 * **Despliegue en Kubernetes:**
   Los manifiestos usan Kustomize: `k8s/base/` contiene los recursos comunes y
   `k8s/overlays/` define las configuraciones local y de producción. Para aplicar
-  manualmente el entorno local:
+  el entorno local, primero prepara el Secret `app-secret` con la clave
+  `DB_PASSWORD` y el ConfigMap `postgres-initdb` con los scripts SQL de
+  `docs/db/`; el manifiesto local los referencia. El volumen persistente local
+  está asociado al nodo `gestion-inventarios-control-plane`. Luego aplica:
 
   ```
   kubectl apply -k k8s/overlays/local
@@ -182,7 +190,8 @@ La API quedará disponible en `http://localhost:8080`.
 
 También puedes ejecutar el flujo local de CI/CD con [Act](https://nektosact.com/).
 Necesitas Docker y Act, un clúster Kubernetes local accesible, y `kubectl`
-disponible dentro del runner de Act. Guarda el kubeconfig del clúster en
+disponible dentro del runner de Act. Prepara los recursos `app-secret` y
+`postgres-initdb` descritos arriba. Guarda el kubeconfig en
 `.kube-local/config`; este archivo está excluido de Git y el workflow lo utiliza
 para conectarse al clúster.
 
@@ -197,6 +206,10 @@ al clúster y delega el despliegue en `scripts/local-cd.sh`. Este script aplica
 `k8s/overlays/local` y espera a que se completen los despliegues de PostgreSQL y
 de la API.
 
+El overlay `production` es un punto de partida: antes de usarlo, configura
+`DB_URL` para apuntar a la instancia de PostgreSQL administrada y proporciona el
+Secret `app-secret` en el clúster. No incluye una base de datos PostgreSQL.
+
 ## 📖 Documentación Interactiva (Swagger / OpenAPI)
 
 La configuración personalizada de OpenAPI se encuentra en `OpenApiConfig.java`. Con el servidor en ejecución puedes acceder a:
@@ -209,7 +222,7 @@ La configuración personalizada de OpenAPI se encuentra en `OpenApiConfig.java`.
 
 ## 🌐 Endpoints Principales
 
-Todas las rutas responden en formato `application/json` y siguen las convenciones REST (sin barra diagonal `/` al final de la URL):
+Los endpoints usan JSON para las solicitudes y respuestas que incluyen contenido; las operaciones `DELETE` responden `204 No Content`.
 
 | Módulo | Controlador | Ruta Base | Operaciones |
 | ----- | ----- | ----- | ----- |
@@ -218,8 +231,8 @@ Todas las rutas responden en formato `application/json` y siguen las convencione
 | **Proveedores** | `ProveedorController` | `/api/proveedores` | `GET`, `POST`, `PUT`, `DELETE` |
 | **Productos** | `ProductoController` | `/api/productos` | `GET`, `POST`, `PUT`, `DELETE` |
 | **Sucursales** | `SucursalController` | `/api/sucursales` | `GET`, `POST`, `PUT`, `DELETE` |
-| **Stock por Sucursal** | `StockSucursalController` | `/api/stock-sucursales` | `GET`, `POST`, `PUT`, `DELETE` |
-| **Movimientos de Inventario** | `MovimientoInventarioController` | `/api/movimientos-inventario` | `GET`, `POST` |
+| **Stock por Sucursal** | `StockSucursalController` | `/api/stocksucursales/{idSucursal}` | `GET` |
+| **Movimientos de Inventario** | `MovimientoInventarioController` | `/api/movimientos` | `GET`, `POST` |
 
 ### Ejemplo de Petición (`POST /api/proveedores`)
 
