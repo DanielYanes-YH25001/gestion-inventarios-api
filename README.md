@@ -83,7 +83,6 @@ gestion-inventarios-api/
 ├── Dockerfile                                       # Imagen Docker de la aplicación
 ├── build.gradle.kts                                 # Dependencias y configuración de Gradle
 └── README.md
-
 ```
 
 ## 📊 Diagramas del Sistema
@@ -100,7 +99,7 @@ Los diagramas de diseño y modelado del proyecto se encuentran disponibles en la
 
 ### 1. Inicializar la base de datos en PostgreSQL
 
-Crea una base de datos en tu instancia local de PostgreSQL (por ejemplo, `gestion_inventarios_api`) y ejecuta los scripts ubicados en `docs/db/` en el siguiente orden:
+Crea una base de datos en tu instancia local de PostgreSQL (por ejemplo, `gestion_inventarios_db`) y ejecuta los scripts ubicados en `docs/db/` en el siguiente orden:
 
 1. `docs/db/script_ddl_postgresql.sql` (estructura de tablas y llaves foráneas).
 
@@ -110,11 +109,11 @@ Crea una base de datos en tu instancia local de PostgreSQL (por ejemplo, `gestio
 
 La conexión definida en `src/main/resources/application.properties` lee las credenciales desde variables de entorno. Configúralas en tu sistema operativo o en la configuración de ejecución (*Run Configuration*) de tu IDE:
 
-| Variable | Descripción | Ejemplo Local | 
-| ----- | ----- | ----- | 
-| `DB_URL` | Cadena de conexión JDBC a PostgreSQL | `jdbc:postgresql://localhost:5432/gestion_inventarios_api` | 
-| `DB_USERNAME` | Usuario de la base de datos | `postgres` | 
-| `DB_PASSWORD` | Contraseña del usuario de PostgreSQL | `tu_contraseña_local` | 
+| Variable | Descripción | Ejemplo Local |
+| ----- | ----- | ----- |
+| `DB_URL` | Cadena de conexión JDBC a PostgreSQL | `jdbc:postgresql://localhost:5432/gestion_inventarios_api` |
+| `DB_USERNAME` | Usuario de la base de datos | `postgres` |
+| `DB_PASSWORD` | Contraseña del usuario de PostgreSQL | `tu_contraseña_local` |
 
 ## 🚀 Despliegue y Ejecución
 
@@ -125,7 +124,6 @@ La conexión definida en `src/main/resources/application.properties` lee las cre
    ```
    git clone https://github.com/DanielYanes-YH25001/gestion-inventarios-api.git
    cd gestion-inventarios-api
-   
    ```
 
 2. **Compilar el proyecto y ejecutar pruebas:**
@@ -134,14 +132,12 @@ La conexión definida en `src/main/resources/application.properties` lee las cre
 
      ```
      ./gradlew clean build
-     
      ```
 
    * **Windows (CMD / PowerShell):**
 
      ```
      gradlew.bat clean build
-     
      ```
 
 3. **Levantar la aplicación:**
@@ -150,14 +146,12 @@ La conexión definida en `src/main/resources/application.properties` lee las cre
 
      ```
      ./gradlew bootRun
-     
      ```
 
    * **Windows (CMD / PowerShell):**
 
      ```
      gradlew.bat bootRun
-     
      ```
 
 La API quedará disponible en `http://localhost:8080`.
@@ -169,11 +163,10 @@ La API quedará disponible en `http://localhost:8080`.
   ```
   docker build -t gestion-inventarios-api:latest .
   docker run -p 8080:8080 \
-    -e DB_URL="jdbc:postgresql://host.docker.internal:5432/gestion_inventarios_api" \
+    -e DB_URL="jdbc:postgresql://host.docker.internal:5432/gestion_inventarios_db" \
     -e DB_USERNAME="postgres" \
     -e DB_PASSWORD="tu_contraseña_local" \
     gestion-inventarios-api:latest
-  
   ```
 
 * **Despliegue en Kubernetes:**
@@ -181,8 +174,25 @@ La API quedará disponible en `http://localhost:8080`.
 
   ```
   kubectl apply -k k8s/base
-  
   ```
+
+### CI/CD local con Act
+
+La automatización local está definida en `.github/workflows/ci-cd-local.yml`.
+El pipeline ejecuta las pruebas JUnit, empaqueta la aplicación, construye la imagen
+Docker y despliega los manifiestos de Kubernetes.
+
+El workflow está pensado para ejecutarse localmente con Act y usa
+`.kube-local/config`, que no debe publicarse. Los datos de PostgreSQL se guardan
+en `.kind-data/postgres`. La guía de reinicio o limpieza de esos datos y del
+clúster local se mantiene en el script `scripts/local-ci.sh`.
+
+Los manifiestos siguen la convención de Kustomize: `k8s/base` contiene los
+recursos comunes de la API; `k8s/overlays/local` añade kind y PostgreSQL local;
+`k8s/overlays/production` configura la API para conectarse a un PostgreSQL
+administrado aparte y no crea una base de datos. El overlay local usa
+`imagePullPolicy: Never` porque la imagen se carga directamente en kind; el
+base usa `IfNotPresent` para permitir imágenes ya disponibles en otros entornos.
 
 ## 📖 Documentación Interactiva (Swagger / OpenAPI)
 
@@ -198,15 +208,15 @@ La configuración personalizada de OpenAPI se encuentra en `OpenApiConfig.java`.
 
 Todas las rutas responden en formato `application/json` y siguen las convenciones REST (sin barra diagonal `/` al final de la URL):
 
-| Módulo | Controlador | Ruta Base | Operaciones | 
-| ----- | ----- | ----- | ----- | 
-| **Estado del Servicio** | `HealthController` | `/api/ping` | `GET` | 
-| **Categorías** | `CategoriaController` | `/api/categorias` | `GET`, `POST`, `PUT`, `DELETE` | 
-| **Proveedores** | `ProveedorController` | `/api/proveedores` | `GET`, `POST`, `PUT`, `DELETE` | 
-| **Productos** | `ProductoController` | `/api/productos` | `GET`, `POST`, `PUT`, `DELETE` | 
-| **Sucursales** | `SucursalController` | `/api/sucursales` | `GET`, `POST`, `PUT`, `DELETE` | 
-| **Stock por Sucursal** | `StockSucursalController` | `/api/stock-sucursales` | `GET`, `POST`, `PUT`, `DELETE` | 
-| **Movimientos de Inventario** | `MovimientoInventarioController` | `/api/movimientos-inventario` | `GET`, `POST` | 
+| Módulo | Controlador | Ruta Base | Operaciones |
+| ----- | ----- | ----- | ----- |
+| **Estado del Servicio** | `HealthController` | `/api/ping` | `GET` |
+| **Categorías** | `CategoriaController` | `/api/categorias` | `GET`, `POST`, `PUT`, `DELETE` |
+| **Proveedores** | `ProveedorController` | `/api/proveedores` | `GET`, `POST`, `PUT`, `DELETE` |
+| **Productos** | `ProductoController` | `/api/productos` | `GET`, `POST`, `PUT`, `DELETE` |
+| **Sucursales** | `SucursalController` | `/api/sucursales` | `GET`, `POST`, `PUT`, `DELETE` |
+| **Stock por Sucursal** | `StockSucursalController` | `/api/stock-sucursales` | `GET`, `POST`, `PUT`, `DELETE` |
+| **Movimientos de Inventario** | `MovimientoInventarioController` | `/api/movimientos-inventario` | `GET`, `POST` |
 
 ### Ejemplo de Petición (`POST /api/proveedores`)
 
@@ -219,7 +229,6 @@ Todas las rutas responden en formato `application/json` y siguen las convencione
   "telefono": "+50375556789",
   "direccion": "Boulevard Los Próceres 25, La Libertad"
 }
-
 ```
 
 **Response (`201 Created`):**
@@ -232,7 +241,6 @@ Todas las rutas responden en formato `application/json` y siguen las convencione
   "telefono": "+50375556789",
   "direccion": "Boulevard Los Próceres 25, La Libertad"
 }
-
 ```
 
 ## 🧪 Comandos de Prueba y Colecciones de Apidog
@@ -245,14 +253,12 @@ Para ejecutar la suite completa de pruebas de controladores y servicios ubicada 
 
   ```
   ./gradlew test
-  
   ```
 
 * **Windows:**
 
   ```
   gradlew.bat test
-  
   ```
 
 ### 2. Colecciones de Apidog
@@ -271,5 +277,4 @@ Las colecciones exportadas con casos de prueba exitosos (`200`, `201`, `204`) y 
 
 ```
 curl -I http://localhost:8080/swagger-ui/index.html
-
 ```

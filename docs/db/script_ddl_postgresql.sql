@@ -1,4 +1,4 @@
--- CREATE DATABASE gestion_inventarios_api;
+-- CREATE DATABASE gestion_inventarios_db;
 
 CREATE TABLE IF NOT EXISTS usuario (
     id_usuario SERIAL PRIMARY KEY,
